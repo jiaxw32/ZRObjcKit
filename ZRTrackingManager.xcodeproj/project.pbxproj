@@ -26,6 +26,12 @@
 		DEC168091FDD283700B1575F /* UNUserNotificationCenter+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167FD1FDD283700B1575F /* UNUserNotificationCenter+ZRTracking.m */; };
 		DEC1680A1FDD283700B1575F /* ZRTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167FF1FDD283700B1575F /* ZRTrackingManager.m */; };
 		DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168201FDD292D00B1575F /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEC168431FDD32E800B1575F /* ZRFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168421FDD32E800B1575F /* ZRFileHelper.m */; };
+		DEC168461FDE632100B1575F /* ZRFileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168451FDE632100B1575F /* ZRFileInfoModel.m */; };
+		DEC168491FDE866A00B1575F /* ZRFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168481FDE866900B1575F /* ZRFileViewController.m */; };
+		DEC168501FDE86A000B1575F /* ZRFileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */; };
+		DEC168531FDE874500B1575F /* ZRFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */; };
+		DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC168571FDEA91C00B1575F /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,16 @@
 		DEC167FF1FDD283700B1575F /* ZRTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTrackingManager.m; sourceTree = "<group>"; };
 		DEC1681F1FDD292D00B1575F /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		DEC168201FDD292D00B1575F /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		DEC168411FDD32E800B1575F /* ZRFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileHelper.h; sourceTree = "<group>"; };
+		DEC168421FDD32E800B1575F /* ZRFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileHelper.m; sourceTree = "<group>"; };
+		DEC168441FDE632100B1575F /* ZRFileInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileInfoModel.h; sourceTree = "<group>"; };
+		DEC168451FDE632100B1575F /* ZRFileInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileInfoModel.m; sourceTree = "<group>"; };
+		DEC168471FDE866900B1575F /* ZRFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileViewController.h; sourceTree = "<group>"; };
+		DEC168481FDE866900B1575F /* ZRFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileViewController.m; sourceTree = "<group>"; };
+		DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZRFileStoryboard.storyboard; sourceTree = "<group>"; };
+		DEC168511FDE874500B1575F /* ZRFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileTableViewCell.h; sourceTree = "<group>"; };
+		DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileTableViewCell.m; sourceTree = "<group>"; };
+		DEC168571FDEA91C00B1575F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,17 +135,19 @@
 		DEC167CD1FDD23AF00B1575F /* ZRTrackingManager */ = {
 			isa = PBXGroup;
 			children = (
-				DEC1680B1FDD292D00B1575F /* ThirdPartyLib */,
-				DEC167E51FDD283700B1575F /* ZRTrackingManagerLib */,
+				DEC168401FDD32CE00B1575F /* ZRFileManager */,
 				DEC167D11FDD23AF00B1575F /* AppDelegate.h */,
 				DEC167D21FDD23AF00B1575F /* AppDelegate.m */,
+				DEC167DA1FDD23AF00B1575F /* Assets.xcassets */,
+				DEC167DF1FDD23AF00B1575F /* Info.plist */,
+				DEC167DC1FDD23AF00B1575F /* LaunchScreen.storyboard */,
+				DEC167D71FDD23AF00B1575F /* Main.storyboard */,
+				DEC167CE1FDD23AF00B1575F /* Supporting Files */,
+				DEC1680B1FDD292D00B1575F /* ThirdPartyLib */,
 				DEC167D41FDD23AF00B1575F /* ViewController.h */,
 				DEC167D51FDD23AF00B1575F /* ViewController.m */,
-				DEC167D71FDD23AF00B1575F /* Main.storyboard */,
-				DEC167DA1FDD23AF00B1575F /* Assets.xcassets */,
-				DEC167DC1FDD23AF00B1575F /* LaunchScreen.storyboard */,
-				DEC167DF1FDD23AF00B1575F /* Info.plist */,
-				DEC167CE1FDD23AF00B1575F /* Supporting Files */,
+				DEC167E51FDD283700B1575F /* ZRTrackingManagerLib */,
+				DEC168571FDEA91C00B1575F /* Images.xcassets */,
 			);
 			path = ZRTrackingManager;
 			sourceTree = "<group>";
@@ -213,6 +231,22 @@
 			path = OpenUDID;
 			sourceTree = "<group>";
 		};
+		DEC168401FDD32CE00B1575F /* ZRFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				DEC168411FDD32E800B1575F /* ZRFileHelper.h */,
+				DEC168421FDD32E800B1575F /* ZRFileHelper.m */,
+				DEC168441FDE632100B1575F /* ZRFileInfoModel.h */,
+				DEC168451FDE632100B1575F /* ZRFileInfoModel.m */,
+				DEC168471FDE866900B1575F /* ZRFileViewController.h */,
+				DEC168481FDE866900B1575F /* ZRFileViewController.m */,
+				DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */,
+				DEC168511FDE874500B1575F /* ZRFileTableViewCell.h */,
+				DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */,
+			);
+			path = ZRFileManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,8 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC167DE1FDD23AF00B1575F /* LaunchScreen.storyboard in Resources */,
+				DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */,
 				DEC167DB1FDD23AF00B1575F /* Assets.xcassets in Resources */,
 				DEC167D91FDD23AF00B1575F /* Main.storyboard in Resources */,
+				DEC168501FDE86A000B1575F /* ZRFileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC1680A1FDD283700B1575F /* ZRTrackingManager.m in Sources */,
+				DEC168431FDD32E800B1575F /* ZRFileHelper.m in Sources */,
 				DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */,
 				DEC168031FDD283700B1575F /* UICollectionView+ZRTracking.m in Sources */,
 				DEC168041FDD283700B1575F /* UIControl+ZRTracking.m in Sources */,
@@ -345,11 +382,14 @@
 				DEC168021FDD283700B1575F /* UIApplication+ZRTracking.m in Sources */,
 				DEC168061FDD283700B1575F /* UITableView+ZRDelegateTracking.m in Sources */,
 				DEC168091FDD283700B1575F /* UNUserNotificationCenter+ZRTracking.m in Sources */,
+				DEC168491FDE866A00B1575F /* ZRFileViewController.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
 				DEC168071FDD283700B1575F /* UIViewController+ZRTracking.m in Sources */,
 				DEC168081FDD283700B1575F /* UIWindow+ZRTracking.m in Sources */,
 				DEC167D01FDD23AF00B1575F /* main.m in Sources */,
+				DEC168531FDE874500B1575F /* ZRFileTableViewCell.m in Sources */,
 				DEC168011FDD283700B1575F /* ZRTrackingHelper.m in Sources */,
+				DEC168461FDE632100B1575F /* ZRFileInfoModel.m in Sources */,
 				DEC168051FDD283700B1575F /* UINavigationController+ZRTracking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
