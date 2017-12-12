@@ -38,7 +38,7 @@
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm";
     NSString *fileCreateDate = [dateFormatter stringFromDate:_model.createDate];
     if (model.isDirectory) {
-        _fileIcon.image = [UIImage imageNamed:@"zr_file"];
+        _fileIcon.image = [UIImage imageNamed:@"zr_folder"];
         NSInteger subFilesCount = [ZRFileHelper subFilesCountOfDirectory:[NSURL fileURLWithPath:model.filePath]];
         _fileDesc.text = [NSString stringWithFormat:@"%lu项 | %@",subFilesCount,fileCreateDate];
     } else {

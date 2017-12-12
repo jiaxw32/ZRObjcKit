@@ -28,7 +28,7 @@
 		DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168201FDD292D00B1575F /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEC168431FDD32E800B1575F /* ZRFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168421FDD32E800B1575F /* ZRFileHelper.m */; };
 		DEC168461FDE632100B1575F /* ZRFileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168451FDE632100B1575F /* ZRFileInfoModel.m */; };
-		DEC168491FDE866A00B1575F /* ZRFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168481FDE866900B1575F /* ZRFileViewController.m */; };
+		DEC168491FDE866A00B1575F /* ZRFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168481FDE866900B1575F /* ZRFileListViewController.m */; };
 		DEC168501FDE86A000B1575F /* ZRFileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */; };
 		DEC168531FDE874500B1575F /* ZRFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */; };
 		DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC168571FDEA91C00B1575F /* Images.xcassets */; };
@@ -76,8 +76,8 @@
 		DEC168421FDD32E800B1575F /* ZRFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileHelper.m; sourceTree = "<group>"; };
 		DEC168441FDE632100B1575F /* ZRFileInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileInfoModel.h; sourceTree = "<group>"; };
 		DEC168451FDE632100B1575F /* ZRFileInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileInfoModel.m; sourceTree = "<group>"; };
-		DEC168471FDE866900B1575F /* ZRFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileViewController.h; sourceTree = "<group>"; };
-		DEC168481FDE866900B1575F /* ZRFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileViewController.m; sourceTree = "<group>"; };
+		DEC168471FDE866900B1575F /* ZRFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileListViewController.h; sourceTree = "<group>"; };
+		DEC168481FDE866900B1575F /* ZRFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileListViewController.m; sourceTree = "<group>"; };
 		DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZRFileStoryboard.storyboard; sourceTree = "<group>"; };
 		DEC168511FDE874500B1575F /* ZRFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileTableViewCell.h; sourceTree = "<group>"; };
 		DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileTableViewCell.m; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 				DEC168421FDD32E800B1575F /* ZRFileHelper.m */,
 				DEC168441FDE632100B1575F /* ZRFileInfoModel.h */,
 				DEC168451FDE632100B1575F /* ZRFileInfoModel.m */,
-				DEC168471FDE866900B1575F /* ZRFileViewController.h */,
-				DEC168481FDE866900B1575F /* ZRFileViewController.m */,
+				DEC168471FDE866900B1575F /* ZRFileListViewController.h */,
+				DEC168481FDE866900B1575F /* ZRFileListViewController.m */,
 				DEC1684F1FDE86A000B1575F /* ZRFileStoryboard.storyboard */,
 				DEC168511FDE874500B1575F /* ZRFileTableViewCell.h */,
 				DEC168521FDE874500B1575F /* ZRFileTableViewCell.m */,
@@ -382,7 +382,7 @@
 				DEC168021FDD283700B1575F /* UIApplication+ZRTracking.m in Sources */,
 				DEC168061FDD283700B1575F /* UITableView+ZRDelegateTracking.m in Sources */,
 				DEC168091FDD283700B1575F /* UNUserNotificationCenter+ZRTracking.m in Sources */,
-				DEC168491FDE866A00B1575F /* ZRFileViewController.m in Sources */,
+				DEC168491FDE866A00B1575F /* ZRFileListViewController.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
 				DEC168071FDD283700B1575F /* UIViewController+ZRTracking.m in Sources */,
 				DEC168081FDD283700B1575F /* UIWindow+ZRTracking.m in Sources */,

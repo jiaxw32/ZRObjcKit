@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ZRFileHelper.h"
-#import "ZRFileViewController.h"
+#import "ZRFileListViewController.h"
 
 @interface ViewController ()
 
@@ -25,35 +25,20 @@
 - (IBAction)onButtonClick:(id)sender {
     
     UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
-    NSLog(@"%@",fileStoryboard);
-    ZRFileViewController *fileViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileViewController"];
-    fileViewController.filePath = NSHomeDirectory();
-    if (fileViewController) {
-        [self.navigationController pushViewController:fileViewController animated:YES];
+    ZRFileListViewController *fileListViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
+    fileListViewController.filePath = NSHomeDirectory();
+    if (fileListViewController) {
+        [self.navigationController pushViewController:fileListViewController animated:YES];
     }
-    
-    
-//    NSString *path = [ZRFileHelper appLibraryPath];
-//    
-//    path = NSHomeDirectory();
-//    
-//    NSURL *fileURL = [NSURL fileURLWithPath:path];
-//    
-//    id parentDirectory;
-//    [fileURL getResourceValue:&parentDirectory forKey:NSURLParentDirectoryURLKey error:nil];
-//    NSLog(@"%@",parentDirectory);
-    
-//    path = [ZRFileManager mainBundlePath];
-    
-//    NSLog(@"path:%@",path);
-    
-//    NSLog(@"document path:%@",[ZRFileManager appDocumentPath]);
-//    NSLog(@"library path:%@",[ZRFileManager appLibraryPath]);
-//    NSLog(@"temp path:%@",[ZRFileManager appTempPath]);
-    
-//    [[ZRFileHelper subFilesOfDirectory:path];
-//    
-//    [[ZRFileHelper contentsOfDirectory:path];
+}
+
+- (IBAction)onMainBundleButtonClick:(id)sender {
+    UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
+    ZRFileListViewController *fileListViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
+    fileListViewController.filePath = [NSBundle mainBundle].bundlePath;
+    if (fileListViewController) {
+        [self.navigationController pushViewController:fileListViewController animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

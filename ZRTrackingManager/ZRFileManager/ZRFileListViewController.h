@@ -1,5 +1,5 @@
 //
-//  ZRFileViewController.h
+//  ZRFileListViewController.h
 //  ZRTrackingManager
 //
 //  Created by jiaxw-mac on 2017/12/11.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZRFileViewController : UIViewController
+@interface ZRFileListViewController : UIViewController
 
 @property (nonatomic,copy) NSString *filePath;
 

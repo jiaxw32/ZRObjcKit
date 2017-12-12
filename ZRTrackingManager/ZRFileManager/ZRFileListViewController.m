@@ -1,32 +1,36 @@
 //
-//  ZRFileViewController.m
+//  ZRFileListViewController.m
 //  ZRTrackingManager
 //
 //  Created by jiaxw-mac on 2017/12/11.
 //  Copyright © 2017年 jiaxw. All rights reserved.
 //
 
-#import "ZRFileViewController.h"
+#import "ZRFileListViewController.h"
 #import "ZRFileTableViewCell.h"
 #import "ZRFileInfoModel.h"
 #import "ZRFileHelper.h"
+#import <QuickLook/QuickLook.h>
 
-@interface ZRFileViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZRFileListViewController ()<UITableViewDelegate,UITableViewDataSource,QLPreviewControllerDelegate,QLPreviewControllerDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic,strong) NSArray *fileInfoArray;
 
+@property (nonatomic,strong) QLPreviewController *previewController;
+
+@property (nonatomic,strong) NSURL *selectedFileURL;
+
 @end
 
-@implementation ZRFileViewController
+@implementation ZRFileListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.estimatedRowHeight = 200;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,13 +38,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - DATA
+#pragma mark - getter/setter
 
 - (void)setFilePath:(NSString *)filePath{
     _filePath = filePath;
     self.fileInfoArray = [ZRFileHelper subFilesOfDirectory:_filePath includeDirectory:YES filter:nil];
     [self.tableView reloadData];
 }
+
+- (QLPreviewController *)previewController{
+    if (!_previewController) {
+        _previewController = [[QLPreviewController alloc] init];
+        _previewController.delegate = self;
+        _previewController.dataSource = self;
+        _previewController.currentPreviewItemIndex = 0;
+    }
+    return _previewController;
+}
+
 
 #pragma mark - UITableView DataSource Delegate
 
@@ -69,16 +84,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ZRFileInfoModel *model = _fileInfoArray[indexPath.row];
-    if (model.isDirectory && [ZRFileHelper subFilesCountOfDirectory:[NSURL fileURLWithPath:model.filePath]] > 0) {
+    if (model.isDirectory) {
         UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
-        NSLog(@"%@",fileStoryboard);
-        ZRFileViewController *fileViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileViewController"];
+        ZRFileListViewController *fileViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
         fileViewController.filePath = model.filePath;
         if (fileViewController) {
             [self.navigationController pushViewController:fileViewController animated:YES];
         }
     } else {
-        NSLog(@"%@",model.fileExtentsion);
+        self.selectedFileURL =[NSURL fileURLWithPath: model.filePath];
+        [self presentViewController:self.previewController animated:YES completion:nil];
     }
 }
 
@@ -91,6 +106,15 @@
     return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
+#pragma mark - QLPreviewControllerDelegate and datasource
+
+- (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller{
+    return 1;
+}
+
+- (id)previewController:(QLPreviewController *)previewController previewItemAtIndex:(NSInteger)idx{
+    return self.selectedFileURL;
+}
 
 
 @end

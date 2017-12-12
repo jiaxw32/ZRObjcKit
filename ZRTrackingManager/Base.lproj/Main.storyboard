@@ -29,7 +29,6 @@
         <!--首页-->
         <scene sceneID="aW2-Kg-19U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yHF-Wm-YB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hE0-dz-mFu" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hbc-L9-Qdg"/>
@@ -40,26 +39,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yp-Ru-BsK">
-                                <rect key="frame" x="133" y="300" width="109" height="66"/>
+                                <rect key="frame" x="133" y="303.5" width="109" height="60"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2CA-dI-wTB"/>
                                     <constraint firstAttribute="width" constant="109" id="U7I-Df-Jm5"/>
                                 </constraints>
-                                <state key="normal" title="Click"/>
+                                <state key="normal" title="SandBox"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onButtonClick:" destination="hE0-dz-mFu" eventType="touchUpInside" id="09B-Bm-a9d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BU9-ad-L8e">
+                                <rect key="frame" x="133" y="386.5" width="109" height="60"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="MainBundle"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onMainBundleButtonClick:" destination="hE0-dz-mFu" eventType="touchUpInside" id="g0e-Pk-iPY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BU9-ad-L8e" firstAttribute="height" secondItem="0yp-Ru-BsK" secondAttribute="height" id="Al8-rR-yrB"/>
                             <constraint firstItem="0yp-Ru-BsK" firstAttribute="centerY" secondItem="MEC-Kp-lcZ" secondAttribute="centerY" id="Dkt-4J-dTU"/>
-                            <constraint firstItem="0yp-Ru-BsK" firstAttribute="top" secondItem="hbc-L9-Qdg" secondAttribute="bottom" constant="236" id="a64-Zx-sNa"/>
                             <constraint firstItem="0yp-Ru-BsK" firstAttribute="centerX" secondItem="MEC-Kp-lcZ" secondAttribute="centerX" id="h82-EW-hce"/>
+                            <constraint firstItem="BU9-ad-L8e" firstAttribute="top" secondItem="0yp-Ru-BsK" secondAttribute="bottom" constant="23" id="juH-S2-HyJ"/>
+                            <constraint firstItem="BU9-ad-L8e" firstAttribute="width" secondItem="0yp-Ru-BsK" secondAttribute="width" id="oDs-uW-yEw"/>
+                            <constraint firstItem="BU9-ad-L8e" firstAttribute="leading" secondItem="0yp-Ru-BsK" secondAttribute="leading" id="y0O-Xx-DS0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="9Xa-0s-nay"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHF-Wm-YB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="-512.29385307346331"/>
         </scene>
