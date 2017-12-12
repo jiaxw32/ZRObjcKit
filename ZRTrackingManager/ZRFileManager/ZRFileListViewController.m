@@ -93,6 +93,7 @@
         }
     } else {
         self.selectedFileURL =[NSURL fileURLWithPath: model.filePath];
+        [self.previewController reloadData];
         [self presentViewController:self.previewController animated:YES completion:nil];
     }
 }

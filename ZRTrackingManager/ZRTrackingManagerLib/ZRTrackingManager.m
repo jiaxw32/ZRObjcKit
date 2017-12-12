@@ -305,6 +305,7 @@ static const NSInteger kZR_Device_Type_iOS  = 1;
 
 
 - (void)endPageTrackingWithPageID:(NSString *)pageID{
+    if (pageID == nil) return;
     dispatch_async(_trackingQueue, ^{
         [[FMDatabaseQueue shareInstance] inDatabase:^(FMDatabase *db) {
             NSError *error;
