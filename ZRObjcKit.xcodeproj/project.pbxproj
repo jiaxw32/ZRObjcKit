@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4A6DC071B447BA00309F1C3 /* libPods-ZRObjcKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */; };
+		DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B1E1FE0158A00471AAF /* ZRFileInfoModel.m */; };
+		DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B211FE0158A00471AAF /* ZRFileTableViewCell.m */; };
+		DE1A4B2B1FE0158A00471AAF /* ZRFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B241FE0158A00471AAF /* ZRFileListViewController.m */; };
+		DE1A4B2C1FE0158A00471AAF /* ZRFileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1A4B251FE0158A00471AAF /* ZRFileStoryboard.storyboard */; };
+		DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B281FE0158A00471AAF /* ZRFileHelper.m */; };
+		DE1A4B4A1FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B321FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m */; };
+		DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B351FE0164100471AAF /* ZRTrackingHelper.m */; };
+		DE1A4B4C1FE0164100471AAF /* UIApplication+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B381FE0164100471AAF /* UIApplication+ZRTracking.m */; };
+		DE1A4B4D1FE0164100471AAF /* UICollectionView+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B3A1FE0164100471AAF /* UICollectionView+ZRTracking.m */; };
+		DE1A4B4E1FE0164100471AAF /* UIControl+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B3C1FE0164100471AAF /* UIControl+ZRTracking.m */; };
+		DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B3E1FE0164100471AAF /* UINavigationController+ZRTracking.m */; };
+		DE1A4B501FE0164100471AAF /* UITableView+ZRDelegateTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B401FE0164100471AAF /* UITableView+ZRDelegateTracking.m */; };
+		DE1A4B511FE0164100471AAF /* UIViewController+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B421FE0164100471AAF /* UIViewController+ZRTracking.m */; };
+		DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B441FE0164100471AAF /* UIWindow+ZRTracking.m */; };
+		DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B461FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m */; };
+		DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */; };
+		DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.m */; };
+		DEC167D01FDD23AF00B1575F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167CF1FDD23AF00B1575F /* main.m */; };
+		DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167D51FDD23AF00B1575F /* ViewController.m */; };
+		DEC167D91FDD23AF00B1575F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC167D71FDD23AF00B1575F /* Main.storyboard */; };
+		DEC167DB1FDD23AF00B1575F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC167DA1FDD23AF00B1575F /* Assets.xcassets */; };
+		DEC167DE1FDD23AF00B1575F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC167DC1FDD23AF00B1575F /* LaunchScreen.storyboard */; };
+		DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168201FDD292D00B1575F /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC168571FDEA91C00B1575F /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A596C0C0B3952EBA6502B26 /* Pods-ZRTrackingManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.debug.xcconfig"; sourceTree = "<group>"; };
+		63ED8B3156D70638E3D2BC4A /* libPods-ZRTrackingManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRTrackingManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7EDB6B9678A0A0B7044F9D /* Pods-ZRObjcKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRObjcKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit.release.xcconfig"; sourceTree = "<group>"; };
+		CB3EFB29EF70196A90659FC8 /* Pods-ZRObjcKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRObjcKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRObjcKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1A4B1D1FE0158A00471AAF /* ZRFileInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileInfoModel.h; sourceTree = "<group>"; };
+		DE1A4B1E1FE0158A00471AAF /* ZRFileInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileInfoModel.m; sourceTree = "<group>"; };
+		DE1A4B201FE0158A00471AAF /* ZRFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileTableViewCell.h; sourceTree = "<group>"; };
+		DE1A4B211FE0158A00471AAF /* ZRFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileTableViewCell.m; sourceTree = "<group>"; };
+		DE1A4B231FE0158A00471AAF /* ZRFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileListViewController.h; sourceTree = "<group>"; };
+		DE1A4B241FE0158A00471AAF /* ZRFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileListViewController.m; sourceTree = "<group>"; };
+		DE1A4B251FE0158A00471AAF /* ZRFileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZRFileStoryboard.storyboard; sourceTree = "<group>"; };
+		DE1A4B271FE0158A00471AAF /* ZRFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileHelper.h; sourceTree = "<group>"; };
+		DE1A4B281FE0158A00471AAF /* ZRFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileHelper.m; sourceTree = "<group>"; };
+		DE1A4B2F1FE0164100471AAF /* ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTracking.h; sourceTree = "<group>"; };
+		DE1A4B311FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabaseQueue+ZRSharedDBQueue.h"; sourceTree = "<group>"; };
+		DE1A4B321FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabaseQueue+ZRSharedDBQueue.m"; sourceTree = "<group>"; };
+		DE1A4B341FE0164100471AAF /* ZRTrackingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTrackingHelper.h; sourceTree = "<group>"; };
+		DE1A4B351FE0164100471AAF /* ZRTrackingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTrackingHelper.m; sourceTree = "<group>"; };
+		DE1A4B371FE0164100471AAF /* UIApplication+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B381FE0164100471AAF /* UIApplication+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B391FE0164100471AAF /* UICollectionView+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B3A1FE0164100471AAF /* UICollectionView+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B3B1FE0164100471AAF /* UIControl+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B3C1FE0164100471AAF /* UIControl+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B3D1FE0164100471AAF /* UINavigationController+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B3E1FE0164100471AAF /* UINavigationController+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B3F1FE0164100471AAF /* UITableView+ZRDelegateTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZRDelegateTracking.h"; sourceTree = "<group>"; };
+		DE1A4B401FE0164100471AAF /* UITableView+ZRDelegateTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZRDelegateTracking.m"; sourceTree = "<group>"; };
+		DE1A4B411FE0164100471AAF /* UIViewController+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B421FE0164100471AAF /* UIViewController+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B431FE0164100471AAF /* UIWindow+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B441FE0164100471AAF /* UIWindow+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B451FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UNUserNotificationCenter+ZRTracking.h"; sourceTree = "<group>"; };
+		DE1A4B461FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UNUserNotificationCenter+ZRTracking.m"; sourceTree = "<group>"; };
+		DE1A4B481FE0164100471AAF /* ZRTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTrackingManager.h; sourceTree = "<group>"; };
+		DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTrackingManager.m; sourceTree = "<group>"; };
+		DE1A4B551FE019CA00471AAF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE1A4B561FE019CA00471AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRObjcKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC167CF1FDD23AF00B1575F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEC167D41FDD23AF00B1575F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DEC167D51FDD23AF00B1575F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DEC167D81FDD23AF00B1575F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEC167DA1FDD23AF00B1575F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEC167DD1FDD23AF00B1575F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEC167DF1FDD23AF00B1575F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC1681F1FDD292D00B1575F /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		DEC168201FDD292D00B1575F /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		DEC168571FDEA91C00B1575F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEC167C81FDD23AF00B1575F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A6DC071B447BA00309F1C3 /* libPods-ZRObjcKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9163A594FBE478B4EA814FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63ED8B3156D70638E3D2BC4A /* libPods-ZRTrackingManager.a */,
+				D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0A56DE23868355E1FA6F1D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A596C0C0B3952EBA6502B26 /* Pods-ZRTrackingManager.debug.xcconfig */,
+				F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */,
+				CB3EFB29EF70196A90659FC8 /* Pods-ZRObjcKit.debug.xcconfig */,
+				8F7EDB6B9678A0A0B7044F9D /* Pods-ZRObjcKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE1A4B1A1FE0158A00471AAF /* ZRFileModule */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B1B1FE0158A00471AAF /* ZRFileBrowser */,
+				DE1A4B261FE0158A00471AAF /* ZRFileHelper */,
+			);
+			path = ZRFileModule;
+			sourceTree = "<group>";
+		};
+		DE1A4B1B1FE0158A00471AAF /* ZRFileBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B1C1FE0158A00471AAF /* Model */,
+				DE1A4B1F1FE0158A00471AAF /* View */,
+				DE1A4B221FE0158A00471AAF /* ViewController */,
+			);
+			path = ZRFileBrowser;
+			sourceTree = "<group>";
+		};
+		DE1A4B1C1FE0158A00471AAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B1D1FE0158A00471AAF /* ZRFileInfoModel.h */,
+				DE1A4B1E1FE0158A00471AAF /* ZRFileInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE1A4B1F1FE0158A00471AAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B201FE0158A00471AAF /* ZRFileTableViewCell.h */,
+				DE1A4B211FE0158A00471AAF /* ZRFileTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE1A4B221FE0158A00471AAF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B231FE0158A00471AAF /* ZRFileListViewController.h */,
+				DE1A4B241FE0158A00471AAF /* ZRFileListViewController.m */,
+				DE1A4B251FE0158A00471AAF /* ZRFileStoryboard.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DE1A4B261FE0158A00471AAF /* ZRFileHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B271FE0158A00471AAF /* ZRFileHelper.h */,
+				DE1A4B281FE0158A00471AAF /* ZRFileHelper.m */,
+			);
+			path = ZRFileHelper;
+			sourceTree = "<group>";
+		};
+		DE1A4B2E1FE0164100471AAF /* ZRTrackingLib */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B2F1FE0164100471AAF /* ZRTracking.h */,
+				DE1A4B301FE0164100471AAF /* ZRTrackingDatabase */,
+				DE1A4B331FE0164100471AAF /* ZRTrackingHelper */,
+				DE1A4B361FE0164100471AAF /* ZRTrackingHook */,
+				DE1A4B471FE0164100471AAF /* ZRTrackingManager */,
+			);
+			path = ZRTrackingLib;
+			sourceTree = "<group>";
+		};
+		DE1A4B301FE0164100471AAF /* ZRTrackingDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B311FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.h */,
+				DE1A4B321FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m */,
+			);
+			path = ZRTrackingDatabase;
+			sourceTree = "<group>";
+		};
+		DE1A4B331FE0164100471AAF /* ZRTrackingHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B341FE0164100471AAF /* ZRTrackingHelper.h */,
+				DE1A4B351FE0164100471AAF /* ZRTrackingHelper.m */,
+			);
+			path = ZRTrackingHelper;
+			sourceTree = "<group>";
+		};
+		DE1A4B361FE0164100471AAF /* ZRTrackingHook */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B371FE0164100471AAF /* UIApplication+ZRTracking.h */,
+				DE1A4B381FE0164100471AAF /* UIApplication+ZRTracking.m */,
+				DE1A4B391FE0164100471AAF /* UICollectionView+ZRTracking.h */,
+				DE1A4B3A1FE0164100471AAF /* UICollectionView+ZRTracking.m */,
+				DE1A4B3B1FE0164100471AAF /* UIControl+ZRTracking.h */,
+				DE1A4B3C1FE0164100471AAF /* UIControl+ZRTracking.m */,
+				DE1A4B3D1FE0164100471AAF /* UINavigationController+ZRTracking.h */,
+				DE1A4B3E1FE0164100471AAF /* UINavigationController+ZRTracking.m */,
+				DE1A4B3F1FE0164100471AAF /* UITableView+ZRDelegateTracking.h */,
+				DE1A4B401FE0164100471AAF /* UITableView+ZRDelegateTracking.m */,
+				DE1A4B411FE0164100471AAF /* UIViewController+ZRTracking.h */,
+				DE1A4B421FE0164100471AAF /* UIViewController+ZRTracking.m */,
+				DE1A4B431FE0164100471AAF /* UIWindow+ZRTracking.h */,
+				DE1A4B441FE0164100471AAF /* UIWindow+ZRTracking.m */,
+				DE1A4B451FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.h */,
+				DE1A4B461FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m */,
+			);
+			path = ZRTrackingHook;
+			sourceTree = "<group>";
+		};
+		DE1A4B471FE0164100471AAF /* ZRTrackingManager */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B481FE0164100471AAF /* ZRTrackingManager.h */,
+				DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */,
+			);
+			path = ZRTrackingManager;
+			sourceTree = "<group>";
+		};
+		DEC167C21FDD23AF00B1575F = {
+			isa = PBXGroup;
+			children = (
+				DEC167CD1FDD23AF00B1575F /* ZRObjcKit */,
+				DEC167CC1FDD23AF00B1575F /* Products */,
+				D0A56DE23868355E1FA6F1D9 /* Pods */,
+				B9163A594FBE478B4EA814FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DEC167CC1FDD23AF00B1575F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEC167CD1FDD23AF00B1575F /* ZRObjcKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A4B551FE019CA00471AAF /* AppDelegate.h */,
+				DE1A4B561FE019CA00471AAF /* AppDelegate.m */,
+				DEC168571FDEA91C00B1575F /* Images.xcassets */,
+				DEC167D71FDD23AF00B1575F /* Main.storyboard */,
+				DEC167CE1FDD23AF00B1575F /* Supporting Files */,
+				DEC1680B1FDD292D00B1575F /* ThirdPartyLib */,
+				DEC167D41FDD23AF00B1575F /* ViewController.h */,
+				DEC167D51FDD23AF00B1575F /* ViewController.m */,
+				DE1A4B1A1FE0158A00471AAF /* ZRFileModule */,
+				DE1A4B2E1FE0164100471AAF /* ZRTrackingLib */,
+			);
+			path = ZRObjcKit;
+			sourceTree = "<group>";
+		};
+		DEC167CE1FDD23AF00B1575F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEC167DA1FDD23AF00B1575F /* Assets.xcassets */,
+				DEC167DF1FDD23AF00B1575F /* Info.plist */,
+				DEC167DC1FDD23AF00B1575F /* LaunchScreen.storyboard */,
+				DEC167CF1FDD23AF00B1575F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEC1680B1FDD292D00B1575F /* ThirdPartyLib */ = {
+			isa = PBXGroup;
+			children = (
+				DEC1681E1FDD292D00B1575F /* OpenUDID */,
+			);
+			path = ThirdPartyLib;
+			sourceTree = "<group>";
+		};
+		DEC1681E1FDD292D00B1575F /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				DEC1681F1FDD292D00B1575F /* OpenUDID.h */,
+				DEC168201FDD292D00B1575F /* OpenUDID.m */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEC167CA1FDD23AF00B1575F /* ZRObjcKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC167E21FDD23AF00B1575F /* Build configuration list for PBXNativeTarget "ZRObjcKit" */;
+			buildPhases = (
+				4897092F97C3CB1C4BA60577 /* [CP] Check Pods Manifest.lock */,
+				DEC167C71FDD23AF00B1575F /* Sources */,
+				DEC167C81FDD23AF00B1575F /* Frameworks */,
+				DEC167C91FDD23AF00B1575F /* Resources */,
+				32EB7376DFB9C41529FB7797 /* [CP] Embed Pods Frameworks */,
+				5CA368295DE79AB3509E139F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZRObjcKit;
+			productName = ZRTrackingManager;
+			productReference = DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEC167C31FDD23AF00B1575F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZR;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = jiaxw;
+				TargetAttributes = {
+					DEC167CA1FDD23AF00B1575F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8MREZQFL24;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DEC167C61FDD23AF00B1575F /* Build configuration list for PBXProject "ZRObjcKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEC167C21FDD23AF00B1575F;
+			productRefGroup = DEC167CC1FDD23AF00B1575F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEC167CA1FDD23AF00B1575F /* ZRObjcKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEC167C91FDD23AF00B1575F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC167DE1FDD23AF00B1575F /* LaunchScreen.storyboard in Resources */,
+				DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */,
+				DEC167DB1FDD23AF00B1575F /* Assets.xcassets in Resources */,
+				DE1A4B2C1FE0158A00471AAF /* ZRFileStoryboard.storyboard in Resources */,
+				DEC167D91FDD23AF00B1575F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32EB7376DFB9C41529FB7797 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4897092F97C3CB1C4BA60577 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA368295DE79AB3509E139F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEC167C71FDD23AF00B1575F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */,
+				DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */,
+				DE1A4B4E1FE0164100471AAF /* UIControl+ZRTracking.m in Sources */,
+				DE1A4B4C1FE0164100471AAF /* UIApplication+ZRTracking.m in Sources */,
+				DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */,
+				DE1A4B4D1FE0164100471AAF /* UICollectionView+ZRTracking.m in Sources */,
+				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,
+				DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */,
+				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
+				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
+				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
+				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
+				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
+				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
+				DE1A4B501FE0164100471AAF /* UITableView+ZRDelegateTracking.m in Sources */,
+				DE1A4B2B1FE0158A00471AAF /* ZRFileListViewController.m in Sources */,
+				DEC167D01FDD23AF00B1575F /* main.m in Sources */,
+				DE1A4B4A1FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m in Sources */,
+				DE1A4B511FE0164100471AAF /* UIViewController+ZRTracking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DEC167D71FDD23AF00B1575F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEC167D81FDD23AF00B1575F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEC167DC1FDD23AF00B1575F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEC167DD1FDD23AF00B1575F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEC167E01FDD23AF00B1575F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEC167E11FDD23AF00B1575F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEC167E31FDD23AF00B1575F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3EFB29EF70196A90659FC8 /* Pods-ZRObjcKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MREZQFL24;
+				INFOPLIST_FILE = ZRObjcKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEC167E41FDD23AF00B1575F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F7EDB6B9678A0A0B7044F9D /* Pods-ZRObjcKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8MREZQFL24;
+				INFOPLIST_FILE = ZRObjcKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEC167C61FDD23AF00B1575F /* Build configuration list for PBXProject "ZRObjcKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC167E01FDD23AF00B1575F /* Debug */,
+				DEC167E11FDD23AF00B1575F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEC167E21FDD23AF00B1575F /* Build configuration list for PBXNativeTarget "ZRObjcKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC167E31FDD23AF00B1575F /* Debug */,
+				DEC167E41FDD23AF00B1575F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEC167C31FDD23AF00B1575F /* Project object */;
+}
