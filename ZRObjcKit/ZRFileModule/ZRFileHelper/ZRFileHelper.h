@@ -1,6 +1,6 @@
 //
 //  ZRFileHelper.h
-//  ZRTrackingManager
+//  ZRObjcKit
 //
 //  Created by jiaxw-mac on 2017/12/10.
 //  Copyright © 2017年 jiaxw. All rights reserved.
@@ -19,6 +19,8 @@
 + (NSString *)appHomePath;
 
 + (NSString *)mainBundlePath;
+
++ (BOOL)isFileExist:(NSString *)path;
 
 + (BOOL)isDirectoryOfURL:(NSURL *)fileURL;
 
@@ -41,5 +43,9 @@
 + (NSString *)getFileType:(NSURL *)fileURL;
 
 + (NSString *)formatFileSize:(NSInteger)fileSize;
+
++ (BOOL)createDirectory:(NSString *)path;
+
++ (BOOL)deleteFileAtPath:(NSString *)path;
 
 @end

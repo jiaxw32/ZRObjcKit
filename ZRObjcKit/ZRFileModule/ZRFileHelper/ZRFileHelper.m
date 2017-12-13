@@ -1,6 +1,6 @@
 //
 //  ZRFileHelper.m
-//  ZRTrackingManager
+//  ZRObjcKit
 //
 //  Created by jiaxw-mac on 2017/12/10.
 //  Copyright © 2017年 jiaxw. All rights reserved.
@@ -29,6 +29,10 @@
 
 + (NSString *)mainBundlePath{
     return [[NSBundle mainBundle] bundlePath];
+}
+
++ (BOOL)isFileExist:(NSString *)path{
+    return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
 + (NSInteger)subFilesCountOfDirectory:(NSURL *)fileURL{
@@ -211,6 +215,33 @@
         result = [NSString stringWithFormat:@"%.2f MB",fileSize/(1024.0/1024.0)];
     } else {//GB
         result = [NSString stringWithFormat:@"%.2f GB",fileSize/(1024.0 * 1024.0 * 1024.0)];
+    }
+    return result;
+}
+
++ (BOOL)createDirectory:(NSString *)path{
+    NSError *error;
+    BOOL result = [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+    if (!result) {
+        NSLog(@"%@",error.description);
+    }
+    return result;
+}
+
++ (BOOL)deleteFileAtPath:(NSString *)path{
+    NSError *error;
+    BOOL result = [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+    if (NO == result) {
+        NSLog(@"%@",error.description);
+    }
+    return result;
+}
+
++ (BOOL)copyFileFrom:(NSString *)srcPath to:(NSString *)destPath{
+    NSError *error;
+    BOOL result = [[NSFileManager defaultManager] copyItemAtPath:srcPath toPath:destPath error:&error];
+    if (NO == result) {
+        NSLog(@"%@",error.description);
     }
     return result;
 }

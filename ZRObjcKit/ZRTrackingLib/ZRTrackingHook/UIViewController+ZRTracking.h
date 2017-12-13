@@ -1,6 +1,6 @@
 //
 //  UIViewController+ZRTracking.h
-//  ZRTrackingManager
+//  ZRObjcKit
 //
 //  Created by jiaxw-mac on 2017/11/30.
 //  Copyright © 2017年 jiaxw. All rights reserved.
