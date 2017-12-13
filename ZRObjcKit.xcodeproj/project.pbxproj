@@ -26,6 +26,7 @@
 		DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */; };
 		DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.m */; };
 		DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B581FE0BAD300471AAF /* TODO.md */; };
+		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
 		DEC167D01FDD23AF00B1575F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167CF1FDD23AF00B1575F /* main.m */; };
 		DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167D51FDD23AF00B1575F /* ViewController.m */; };
 		DEC167D91FDD23AF00B1575F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC167D71FDD23AF00B1575F /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		DE1A4B551FE019CA00471AAF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE1A4B561FE019CA00471AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE1A4B581FE0BAD300471AAF /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRObjcKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC167CF1FDD23AF00B1575F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEC167D41FDD23AF00B1575F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */,
 				B4A6DC071B447BA00309F1C3 /* libPods-ZRObjcKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +108,7 @@
 		B9163A594FBE478B4EA814FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */,
 				63ED8B3156D70638E3D2BC4A /* libPods-ZRTrackingManager.a */,
 				D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */,
 			);
