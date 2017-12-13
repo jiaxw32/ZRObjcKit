@@ -160,7 +160,9 @@
 }
 
 + (BOOL)isDirectoryOfPath:(NSString *)path{
-    return [[NSFileManager defaultManager] fileExistsAtPath:path];
+    BOOL isDirectory = NO;
+    return [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory];
+    return isDirectory;
 }
 
 + (NSString *)getFileName:(NSURL *)fileURL{
