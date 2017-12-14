@@ -7,10 +7,7 @@
 //
 
 #import "ZRTextViewAutoSizeViewController.h"
-
-#define kZRTextViewMinHeight 48
-#define kZRTextViewMaxHeight 160
-#define kZRTextViewVerticalMargin 8
+#import "ZRTextViewAutoSizeConstant.h"
 
 @interface ZRTextViewAutoSizeViewController ()<UITextViewDelegate>
 

@@ -10,6 +10,7 @@
 #import "ZRFileHelper.h"
 #import "ZRFileListViewController.h"
 #import "ZRTextViewAutoSizeViewController.h"
+#import "ZRTextViewAutoSizeExViewController.h"
 
 @interface ViewController ()
 
@@ -42,11 +43,14 @@
     }
 }
 - (IBAction)onTextViewAutoSizeButtonClickHandler:(id)sender {
-    UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ZRTextViewAutoSizeViewController *textViewAutoSizeVC = [fileStoryboard instantiateViewControllerWithIdentifier:@"ZRTextViewAutoSizeScene"];
-    if (textViewAutoSizeVC) {
-        [self.navigationController pushViewController:textViewAutoSizeVC animated:YES];
-    }
+//    UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    ZRTextViewAutoSizeViewController *textViewAutoSizeVC = [fileStoryboard instantiateViewControllerWithIdentifier:@"ZRTextViewAutoSizeScene"];
+//    if (textViewAutoSizeVC) {
+//        [self.navigationController pushViewController:textViewAutoSizeVC animated:YES];
+//    }
+    
+    ZRTextViewAutoSizeExViewController *vc = [[ZRTextViewAutoSizeExViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -35,6 +35,7 @@
 		DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC168201FDD292D00B1575F /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC168571FDEA91C00B1575F /* Images.xcassets */; };
 		DED5C24C1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C24B1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m */; };
+		DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C24E1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,9 @@
 		DEC168571FDEA91C00B1575F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DED5C24A1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTextViewAutoSizeViewController.h; sourceTree = "<group>"; };
 		DED5C24B1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTextViewAutoSizeViewController.m; sourceTree = "<group>"; };
+		DED5C24D1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTextViewAutoSizeExViewController.h; sourceTree = "<group>"; };
+		DED5C24E1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTextViewAutoSizeExViewController.m; sourceTree = "<group>"; };
+		DED5C2501FE2B9130022BA5B /* ZRTextViewAutoSizeConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRTextViewAutoSizeConstant.h; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +329,9 @@
 			children = (
 				DED5C24A1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.h */,
 				DED5C24B1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m */,
+				DED5C24D1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.h */,
+				DED5C24E1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m */,
+				DED5C2501FE2B9130022BA5B /* ZRTextViewAutoSizeConstant.h */,
 			);
 			path = ZRTextViewAutoSizeDemo;
 			sourceTree = "<group>";
@@ -460,6 +467,7 @@
 				DE1A4B4E1FE0164100471AAF /* UIControl+ZRTracking.m in Sources */,
 				DE1A4B4C1FE0164100471AAF /* UIApplication+ZRTracking.m in Sources */,
 				DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */,
+				DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */,
 				DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */,
 				DE1A4B4D1FE0164100471AAF /* UICollectionView+ZRTracking.m in Sources */,
 				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,

@@ -9,5 +9,6 @@ target 'ZRObjcKit' do
   pod 'FMDB', '~> 2.7.2'
   pod 'FMDBHelpers', '~> 0.0.7'
   pod 'Ono', '~> 1.2.2'
+  pod 'Masonry', '~> 1.0.2'
 
 end
