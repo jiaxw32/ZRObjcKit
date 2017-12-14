@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ZRFileHelper.h"
 #import "ZRFileListViewController.h"
+#import "ZRTextViewAutoSizeViewController.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,13 @@
     fileListViewController.filePath = [NSBundle mainBundle].bundlePath;
     if (fileListViewController) {
         [self.navigationController pushViewController:fileListViewController animated:YES];
+    }
+}
+- (IBAction)onTextViewAutoSizeButtonClickHandler:(id)sender {
+    UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ZRTextViewAutoSizeViewController *textViewAutoSizeVC = [fileStoryboard instantiateViewControllerWithIdentifier:@"ZRTextViewAutoSizeScene"];
+    if (textViewAutoSizeVC) {
+        [self.navigationController pushViewController:textViewAutoSizeVC animated:YES];
     }
 }
 

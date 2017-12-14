@@ -9,7 +9,7 @@
 #ifndef ZRTracking_h
 #define ZRTracking_h
 
-#define ZRTrackingLogVerbose 1
+#define ZRTrackingLogVerbose 0
 
 #define ZRTrackingUploadDataEnable 0
 
