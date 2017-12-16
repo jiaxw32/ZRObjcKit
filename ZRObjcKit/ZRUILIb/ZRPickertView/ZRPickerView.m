@@ -7,7 +7,6 @@
 //
 
 #import "ZRPickerView.h"
-#import <Masonry.h>
 
 @interface ZRPickerView ()<UIPickerViewDelegate,UIPickerViewDataSource>
 

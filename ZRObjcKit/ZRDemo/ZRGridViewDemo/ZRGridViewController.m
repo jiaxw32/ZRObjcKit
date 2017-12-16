@@ -8,7 +8,6 @@
 
 #import "ZRGridViewController.h"
 #import "ZRGridView.h"
-#import <Masonry.h>
 
 @interface ZRGridViewController ()<ZRGridViewDelegate,ZRGridViewDataSource>
 

@@ -114,6 +114,7 @@
 		DED5C2711FE517C90022BA5B /* ZRGridViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewHeader.m; sourceTree = "<group>"; };
 		DED5C2721FE517C90022BA5B /* ZRGridViewLayoutAndStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridViewLayoutAndStyle.h; sourceTree = "<group>"; };
 		DED5C2731FE517C90022BA5B /* ZRGridViewLayoutAndStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewLayoutAndStyle.m; sourceTree = "<group>"; };
+		DED5C2781FE518B10022BA5B /* ZRObjcKit-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZRObjcKit-PrefixHeader.pch"; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,6 +303,7 @@
 				DE1A4B1A1FE0158A00471AAF /* ZRFileModule */,
 				DE1A4B2E1FE0164100471AAF /* ZRTrackingLib */,
 				DED5C2661FE510FE0022BA5B /* ZRUILIb */,
+				DED5C2781FE518B10022BA5B /* ZRObjcKit-PrefixHeader.pch */,
 			);
 			path = ZRObjcKit;
 			sourceTree = "<group>";
@@ -675,6 +677,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8MREZQFL24;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "ZRObjcKit/ZRObjcKit-PrefixHeader.pch";
 				INFOPLIST_FILE = ZRObjcKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
@@ -688,6 +693,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8MREZQFL24;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "ZRObjcKit/ZRObjcKit-PrefixHeader.pch";
 				INFOPLIST_FILE = ZRObjcKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;

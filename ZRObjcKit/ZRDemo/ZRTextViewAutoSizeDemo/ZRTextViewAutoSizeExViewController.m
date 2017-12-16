@@ -8,7 +8,6 @@
 
 #import "ZRTextViewAutoSizeExViewController.h"
 #import "ZRTextViewAutoSizeConstant.h"
-#import <Masonry/Masonry.h>
 
 @interface ZRTextViewAutoSizeExViewController ()<UITextViewDelegate>
 
