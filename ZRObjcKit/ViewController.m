@@ -12,6 +12,7 @@
 #import "ZRTextViewAutoSizeViewController.h"
 #import "ZRTextViewAutoSizeExViewController.h"
 #import "ZRGridViewController.h"
+#import "ZRPickerView.h"
 
 @interface ViewController ()
 
@@ -53,8 +54,23 @@
 //    ZRTextViewAutoSizeExViewController *vc = [[ZRTextViewAutoSizeExViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    ZRPickerView *pickerView = [[ZRPickerView alloc] init];
+    pickerView.pickerViewHeight = 480;
+    pickerView.numberOfComponents = 2;
+    pickerView.levelOneDataSource = @[@"河北",@"山西",@"河南",@"山东"];
+    pickerView.levelTwoDataSource = @[
+                                      @[@"石家庄",@"唐山",@"张家口",@"邯郸",@"承德",@"衡水",@"邢台"],
+                                      @[@"阳泉",@"太原",@"大同",@"五台",@"朔州",@"吕梁",@"临汾"],
+                                      @[@"郑州",@"洛阳",@"周口",@"开封",@"平顶山",@"安阳",@"商丘",@"信阳"],
+                                      @[@"济南",@"青岛",@"威海",@"蓬莱",@"泰安",@"烟台"],
+                                      ];
+    pickerView.okClickBlock = ^(ZRPickerView *sender, NSInteger firstColSelectedIndex, NSInteger secondColSelectedIndex) {
+        //TODO: do you want to do
+    };
+    [pickerView show];
 }
 
 - (void)didReceiveMemoryWarning {
