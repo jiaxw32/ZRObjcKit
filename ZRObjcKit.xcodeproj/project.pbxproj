@@ -36,6 +36,11 @@
 		DEC168581FDEA91C00B1575F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC168571FDEA91C00B1575F /* Images.xcassets */; };
 		DED5C24C1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C24B1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m */; };
 		DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C24E1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m */; };
+		DED5C25D1FE5049E0022BA5B /* ZRGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2561FE5049E0022BA5B /* ZRGridView.m */; };
+		DED5C25E1FE5049E0022BA5B /* ZRGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2581FE5049E0022BA5B /* ZRGridViewCell.m */; };
+		DED5C25F1FE5049E0022BA5B /* ZRGridViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C25A1FE5049E0022BA5B /* ZRGridViewHeader.m */; };
+		DED5C2601FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C25C1FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.m */; };
+		DED5C2651FE506160022BA5B /* ZRGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2641FE506160022BA5B /* ZRGridViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +101,16 @@
 		DED5C24D1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTextViewAutoSizeExViewController.h; sourceTree = "<group>"; };
 		DED5C24E1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTextViewAutoSizeExViewController.m; sourceTree = "<group>"; };
 		DED5C2501FE2B9130022BA5B /* ZRTextViewAutoSizeConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRTextViewAutoSizeConstant.h; sourceTree = "<group>"; };
+		DED5C2551FE5049E0022BA5B /* ZRGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridView.h; sourceTree = "<group>"; };
+		DED5C2561FE5049E0022BA5B /* ZRGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridView.m; sourceTree = "<group>"; };
+		DED5C2571FE5049E0022BA5B /* ZRGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridViewCell.h; sourceTree = "<group>"; };
+		DED5C2581FE5049E0022BA5B /* ZRGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewCell.m; sourceTree = "<group>"; };
+		DED5C2591FE5049E0022BA5B /* ZRGridViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridViewHeader.h; sourceTree = "<group>"; };
+		DED5C25A1FE5049E0022BA5B /* ZRGridViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewHeader.m; sourceTree = "<group>"; };
+		DED5C25B1FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridViewLayoutAndStyle.h; sourceTree = "<group>"; };
+		DED5C25C1FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewLayoutAndStyle.m; sourceTree = "<group>"; };
+		DED5C2631FE506160022BA5B /* ZRGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRGridViewController.h; sourceTree = "<group>"; };
+		DED5C2641FE506160022BA5B /* ZRGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRGridViewController.m; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,6 +297,7 @@
 				DEC167D51FDD23AF00B1575F /* ViewController.m */,
 				DED5C2481FE267A90022BA5B /* ZRDemo */,
 				DE1A4B1A1FE0158A00471AAF /* ZRFileModule */,
+				DED5C2541FE5049E0022BA5B /* ZRGridView */,
 				DE1A4B2E1FE0164100471AAF /* ZRTrackingLib */,
 			);
 			path = ZRObjcKit;
@@ -319,6 +335,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DED5C2621FE505E80022BA5B /* ZRGridViewDemo */,
 				DED5C2491FE26C970022BA5B /* ZRTextViewAutoSizeDemo */,
 			);
 			path = ZRDemo;
@@ -334,6 +351,30 @@
 				DED5C2501FE2B9130022BA5B /* ZRTextViewAutoSizeConstant.h */,
 			);
 			path = ZRTextViewAutoSizeDemo;
+			sourceTree = "<group>";
+		};
+		DED5C2541FE5049E0022BA5B /* ZRGridView */ = {
+			isa = PBXGroup;
+			children = (
+				DED5C2551FE5049E0022BA5B /* ZRGridView.h */,
+				DED5C2561FE5049E0022BA5B /* ZRGridView.m */,
+				DED5C2571FE5049E0022BA5B /* ZRGridViewCell.h */,
+				DED5C2581FE5049E0022BA5B /* ZRGridViewCell.m */,
+				DED5C2591FE5049E0022BA5B /* ZRGridViewHeader.h */,
+				DED5C25A1FE5049E0022BA5B /* ZRGridViewHeader.m */,
+				DED5C25B1FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.h */,
+				DED5C25C1FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.m */,
+			);
+			path = ZRGridView;
+			sourceTree = "<group>";
+		};
+		DED5C2621FE505E80022BA5B /* ZRGridViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DED5C2631FE506160022BA5B /* ZRGridViewController.h */,
+				DED5C2641FE506160022BA5B /* ZRGridViewController.m */,
+			);
+			path = ZRGridViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,14 +511,19 @@
 				DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */,
 				DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */,
 				DE1A4B4D1FE0164100471AAF /* UICollectionView+ZRTracking.m in Sources */,
+				DED5C25E1FE5049E0022BA5B /* ZRGridViewCell.m in Sources */,
 				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,
 				DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */,
 				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
+				DED5C25D1FE5049E0022BA5B /* ZRGridView.m in Sources */,
 				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
 				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
 				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
+				DED5C25F1FE5049E0022BA5B /* ZRGridViewHeader.m in Sources */,
+				DED5C2601FE5049E0022BA5B /* ZRGridViewLayoutAndStyle.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
+				DED5C2651FE506160022BA5B /* ZRGridViewController.m in Sources */,
 				DE1A4B501FE0164100471AAF /* UITableView+ZRDelegateTracking.m in Sources */,
 				DE1A4B2B1FE0158A00471AAF /* ZRFileListViewController.m in Sources */,
 				DEC167D01FDD23AF00B1575F /* main.m in Sources */,

@@ -11,6 +11,7 @@
 #import "ZRFileListViewController.h"
 #import "ZRTextViewAutoSizeViewController.h"
 #import "ZRTextViewAutoSizeExViewController.h"
+#import "ZRGridViewController.h"
 
 @interface ViewController ()
 
@@ -49,7 +50,10 @@
 //        [self.navigationController pushViewController:textViewAutoSizeVC animated:YES];
 //    }
     
-    ZRTextViewAutoSizeExViewController *vc = [[ZRTextViewAutoSizeExViewController alloc] init];
+//    ZRTextViewAutoSizeExViewController *vc = [[ZRTextViewAutoSizeExViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
