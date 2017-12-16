@@ -13,6 +13,7 @@
 #import "ZRTextViewAutoSizeExViewController.h"
 #import "ZRGridViewController.h"
 #import "ZRPickerView.h"
+#import "ZRTabBarViewController.h"
 
 @interface ViewController ()
 
@@ -57,6 +58,10 @@
 //    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
+    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
+    [self.navigationController pushViewController:tabBarViewController animated:YES];
+    
+    /*
     ZRPickerView *pickerView = [[ZRPickerView alloc] init];
     pickerView.pickerViewHeight = 480;
     pickerView.numberOfComponents = 2;
@@ -71,6 +76,7 @@
         //TODO: do you want to do
     };
     [pickerView show];
+     */
 }
 
 - (void)didReceiveMemoryWarning {

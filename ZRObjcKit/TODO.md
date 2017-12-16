@@ -11,5 +11,5 @@
 * - [x] ZRGridView集成
 * - [ ] 日历组件集成
 * - [ ] 仿微信运动拆线图
-* - [ ] GCD Demo集成
-* - [ ] PickerView集成
+* - [x] PickerView集成
+* - [x] MDTabbar集成

@@ -23,6 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
     CGFloat deviceVersion = [[UIDevice currentDevice].systemVersion floatValue];
     if (deviceVersion >= 10.0 ) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
