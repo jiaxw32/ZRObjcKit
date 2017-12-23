@@ -28,6 +28,7 @@
 		DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B581FE0BAD300471AAF /* TODO.md */; };
 		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
 		DEBE6F5B1FEE079600CD0854 /* ZRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */; };
+		DEBE6F641FEE307900CD0854 /* NSObject+ZRRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE6F631FEE307900CD0854 /* NSObject+ZRRuntime.m */; };
 		DEC167D01FDD23AF00B1575F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167CF1FDD23AF00B1575F /* main.m */; };
 		DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167D51FDD23AF00B1575F /* ViewController.m */; };
 		DEC167D91FDD23AF00B1575F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC167D71FDD23AF00B1575F /* Main.storyboard */; };
@@ -92,6 +93,8 @@
 		DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		DEBE6F591FEE079600CD0854 /* ZRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPerson.h; sourceTree = "<group>"; };
 		DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPerson.m; sourceTree = "<group>"; };
+		DEBE6F621FEE307900CD0854 /* NSObject+ZRRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZRRuntime.h"; sourceTree = "<group>"; };
+		DEBE6F631FEE307900CD0854 /* NSObject+ZRRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZRRuntime.m"; sourceTree = "<group>"; };
 		DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRObjcKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC167CF1FDD23AF00B1575F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEC167D41FDD23AF00B1575F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				DEBE6F581FEE072F00CD0854 /* MessageForwarding */,
+				DEBE6F621FEE307900CD0854 /* NSObject+ZRRuntime.h */,
+				DEBE6F631FEE307900CD0854 /* NSObject+ZRRuntime.m */,
 			);
 			path = ZRRuntimeDemo;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */,
 				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
 				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
+				DEBE6F641FEE307900CD0854 /* NSObject+ZRRuntime.m in Sources */,
 				DED5C26A1FE5113F0022BA5B /* ZRPickerView.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
 				DED5C2651FE506160022BA5B /* ZRGridViewController.m in Sources */,

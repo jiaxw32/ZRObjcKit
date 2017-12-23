@@ -21,4 +21,10 @@
  */
 @interface ZRPerson : NSObject
 
+@property (nonatomic,copy) NSString *name;
+
+@property (nonatomic,assign) NSUInteger age;
+
+@property (nonatomic,assign) BOOL sex;
+
 @end

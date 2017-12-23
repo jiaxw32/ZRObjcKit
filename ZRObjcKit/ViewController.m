@@ -14,6 +14,8 @@
 #import "ZRGridViewController.h"
 #import "ZRPickerView.h"
 #import "ZRTabBarViewController.h"
+#import "NSObject+ZRRuntime.h"
+#import "ZRPerson.h"
 
 @interface ViewController ()
 
@@ -25,6 +27,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [ZRPerson zr_logPropertyList:YES];
+    [ZRPerson zr_logIvarList:YES];
+    [ZRPerson zr_logInstanceVarInfoByName:@"_name"];
+    [ZRPerson zr_logPropertyInfoByName:@"description"];
+    [ZRPerson zr_logMethodList:YES];
+    [ZRPerson zr_logProtocolList:YES];
 }
 
 - (IBAction)onButtonClick:(id)sender {
