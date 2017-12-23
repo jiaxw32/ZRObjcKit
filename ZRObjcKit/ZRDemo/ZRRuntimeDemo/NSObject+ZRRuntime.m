@@ -12,7 +12,7 @@
 
 @implementation NSObject (ZRRuntime)
 
-+ (void)zr_logIvarList:(BOOL)includeSuperIvars{
++ (void)zr_debugVariables:(BOOL)includeSuperVariables{
     unsigned int count = 0;
     Class cls = self;
     BOOL stop = NO;
@@ -26,13 +26,14 @@
             printf("\t%s\n",ivar_getTypeEncoding(var));
         }
         cls = [cls superclass];
-        stop = !includeSuperIvars;
+        stop = !includeSuperVariables;
         free(varList);
     }
     printf("==============END   LOG <%s> VARS==============\n",class_getName(self));
 }
 
-+ (void)zr_logInstanceVarInfoByName:(NSString *)name{
+
++ (void)zr_debugInstanceVarInfoByName:(NSString *)name{
     
     Ivar var = class_getInstanceVariable(self, [name UTF8String]);
     printf("name: %s\n",ivar_getName(var));
@@ -40,7 +41,7 @@
     printf("type encoding: %s\n",ivar_getTypeEncoding(var));
 }
 
-+ (void)zr_logClassVarInfoByName:(NSString *)name{
++ (void)zr_debugClassVarInfoByName:(NSString *)name{
     Ivar var = class_getClassVariable(self, [name UTF8String]);
     printf("name: %s\n",ivar_getName(var));
     printf("offset: %zd\n", ivar_getOffset(var));
@@ -48,7 +49,7 @@
 }
 
 
-+ (void)zr_logPropertyList:(BOOL)includeSuperProperties{
++ (void)zr_debugProperties:(BOOL)includeSuperProperties{
     unsigned int count = 0;
     Class cls = self;
     BOOL stop = NO;
@@ -91,29 +92,49 @@
 }
 
 
-+ (void)zr_logMethodList:(BOOL)includeSuperMethods{
-    unsigned int count = 0;
++ (void)zr_debugInstanceMethods:(BOOL)includeSuperMethods{
     Class cls = self;
-    cls = objc_getMetaClass(class_getName(self));
+    printf("\n==============BEGIN LOG <%s> INSTANCE METHODS==============\n",class_getName(cls));
+    [self zr_methodsForClass:cls includeSuperMethods:includeSuperMethods];
+    printf("==============END   LOG <%s> INSTANCE METHODS==============\n",class_getName(cls));
+}
+
++ (void)zr_debugClassMethods:(BOOL)includeSuperMethods{
+    const char *clsName = class_getName(self);
+    Class cls = objc_getMetaClass(clsName);
+    printf("\n==============BEGIN LOG <%s> CLASS METHODS==============\n", clsName);
+    [self zr_methodsForClass:cls includeSuperMethods:includeSuperMethods];
+    printf("==============END   LOG <%s> CLASS METHODS==============\n", clsName);
+}
+
++ (void)zr_methodsForClass:(Class)cls includeSuperMethods:(BOOL)includeSuperMethods{
+    unsigned int count = 0;
     BOOL stop = NO;
-    printf("\n==============BEGIN LOG <%s> METHODS==============\n",class_getName(self));
     while (cls != nil && NO == stop) {
         Method *methodList =class_copyMethodList(cls, &count);
-        printf("%s(%i):\n",class_getName(cls),count);
+        const char *clsName = class_getName(cls);
+        printf("%s(%i):\n",clsName,count);
         for (unsigned int i = 0; i < count; i++) {
             SEL sel = method_getName(methodList[i]);
             const char *typeEncoding = method_getTypeEncoding(methodList[i]);
             printf("\t%s\t%s\n", sel_getName(sel),typeEncoding);
         }
+        
+        if (class_isMetaClass(cls) &&
+            (0 == strcmp(clsName, class_getName([NSObject class])))) {
+            stop = YES;
+            continue;
+        }
+        
         cls = [cls superclass];
         stop = !includeSuperMethods;
+        
         free(methodList);
     }
-    printf("==============END   LOG <%s> METHODS==============\n",class_getName(self));
 }
 
 
-+ (void)zr_logProtocolList:(BOOL)includeSuperProtocols{
++ (void)zr_debugProtocols:(BOOL)includeSuperProtocols{
     unsigned int count;
     Class cls = self;
     BOOL stop = NO;
@@ -130,6 +151,17 @@
         free(protocols);
     }
     printf("==============END   LOG <%s> PROTOCOLS==============\n",class_getName(self));
+}
+
++ (NSArray *)zr_debugClasses{
+    unsigned int count;
+    Class *classes = objc_copyClassList(&count);
+    NSMutableArray *result = [NSMutableArray array];
+    for (unsigned int i = 0 ; i < count; i++) {
+        [result addObject:NSStringFromClass(classes[i])];
+    }
+    free(classes);
+    return [result sortedArrayUsingSelector:@selector(compare:)];
 }
 
 @end

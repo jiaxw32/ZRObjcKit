@@ -10,18 +10,14 @@
 
 @interface NSObject (ZRRuntime)
 
-+ (void)zr_logIvarList:(BOOL)includeSuperIvars;
++ (void)zr_debugVariables:(BOOL)includeSuperVariables;
 
-+ (void)zr_logInstanceVarInfoByName:(NSString *)name;
++ (void)zr_debugProperties:(BOOL)includeSuperProperties;
 
-+ (void)zr_logClassVarInfoByName:(NSString *)name;
++ (void)zr_debugInstanceMethods:(BOOL)includeSuperMethods;
 
-+ (void)zr_logPropertyList:(BOOL)includeSuperProperties;
++ (void)zr_debugClassMethods:(BOOL)includeSuperMethods;
 
-+ (void)zr_logPropertyInfoByName:(NSString *)name;
-
-+ (void)zr_logMethodList:(BOOL)includeSuperMethods;
-
-+ (void)zr_logProtocolList:(BOOL)includeSuperProtocols;
++ (void)zr_debugProtocols:(BOOL)includeSuperProtocols;
 
 @end

@@ -27,12 +27,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [ZRPerson zr_logPropertyList:YES];
-    [ZRPerson zr_logIvarList:YES];
-    [ZRPerson zr_logInstanceVarInfoByName:@"_name"];
-    [ZRPerson zr_logPropertyInfoByName:@"description"];
-    [ZRPerson zr_logMethodList:YES];
-    [ZRPerson zr_logProtocolList:YES];
+    [ZRPerson zr_debugVariables:NO];
+    [ZRPerson zr_debugProperties:NO];
+    
+    [ZRPerson zr_debugInstanceMethods:NO];
+    [ZRPerson zr_debugClassMethods:NO];
+
 }
 
 - (IBAction)onButtonClick:(id)sender {
