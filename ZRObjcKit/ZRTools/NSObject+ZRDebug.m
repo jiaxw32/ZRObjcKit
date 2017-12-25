@@ -1,16 +1,16 @@
 //
-//  NSObject+ZRRuntime.m
+//  NSObject+ZRDebug.m
 //  ZRObjcKit
 //
 //  Created by jiaxw-mac on 2017/12/23.
 //  Copyright © 2017年 jiaxw. All rights reserved.
 //
 
-#import "NSObject+ZRRuntime.h"
+#import "NSObject+ZRDebug.h"
 #import <objc/runtime.h>
 #import "ZRPerson.h"
 
-@implementation NSObject (ZRRuntime)
+@implementation NSObject (ZRDebug)
 
 + (void)zr_debugVariables:(BOOL)includeSuperVariables{
     unsigned int count = 0;
@@ -72,7 +72,7 @@
 }
 
 
-+ (void)zr_logPropertyInfoByName:(NSString *)name{
++ (void)zr_debugPropertyInfoByName:(NSString *)name{
     //获取类指定的属性
     objc_property_t property = class_getProperty(self, [name UTF8String]);
     
@@ -151,17 +151,6 @@
         free(protocols);
     }
     printf("==============END   LOG <%s> PROTOCOLS==============\n",class_getName(self));
-}
-
-+ (NSArray *)zr_debugClasses{
-    unsigned int count;
-    Class *classes = objc_copyClassList(&count);
-    NSMutableArray *result = [NSMutableArray array];
-    for (unsigned int i = 0 ; i < count; i++) {
-        [result addObject:NSStringFromClass(classes[i])];
-    }
-    free(classes);
-    return [result sortedArrayUsingSelector:@selector(compare:)];
 }
 
 @end

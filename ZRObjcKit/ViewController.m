@@ -14,8 +14,9 @@
 #import "ZRGridViewController.h"
 #import "ZRPickerView.h"
 #import "ZRTabBarViewController.h"
-#import "NSObject+ZRRuntime.h"
+#import "NSObject+ZRDebug.h"
 #import "ZRPerson.h"
+#import "NSObject+ZRDeallocObserve.h"
 
 @interface ViewController ()
 
@@ -39,6 +40,9 @@
     
     UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
     ZRFileListViewController *fileListViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
+    [fileListViewController observeDeallocWithBlock:^{
+        NSLog(@"ZRFileListViewController dealloced~");
+    }];
     fileListViewController.filePath = NSHomeDirectory();
     if (fileListViewController) {
         [self.navigationController pushViewController:fileListViewController animated:YES];
