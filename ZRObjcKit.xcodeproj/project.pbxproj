@@ -29,6 +29,8 @@
 		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
 		DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */; };
 		DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */; };
+		DE7894831FF38C7F0060AE7A /* ZRBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894821FF38C7F0060AE7A /* ZRBoss.m */; };
+		DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894851FF38C8C0060AE7A /* ZRWorker.m */; };
 		DEBE6F5B1FEE079600CD0854 /* ZRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */; };
 		DEC167D01FDD23AF00B1575F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167CF1FDD23AF00B1575F /* main.m */; };
 		DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167D51FDD23AF00B1575F /* ViewController.m */; };
@@ -96,6 +98,10 @@
 		DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZRDebug.m"; sourceTree = "<group>"; };
 		DE78947D1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZRDeallocObserve.h"; sourceTree = "<group>"; };
 		DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZRDeallocObserve.m"; sourceTree = "<group>"; };
+		DE7894811FF38C7F0060AE7A /* ZRBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBoss.h; sourceTree = "<group>"; };
+		DE7894821FF38C7F0060AE7A /* ZRBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBoss.m; sourceTree = "<group>"; };
+		DE7894841FF38C8C0060AE7A /* ZRWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRWorker.h; sourceTree = "<group>"; };
+		DE7894851FF38C8C0060AE7A /* ZRWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRWorker.m; sourceTree = "<group>"; };
 		DEBE6F591FEE079600CD0854 /* ZRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPerson.h; sourceTree = "<group>"; };
 		DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPerson.m; sourceTree = "<group>"; };
 		DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRObjcKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +306,17 @@
 			path = ZRTools;
 			sourceTree = "<group>";
 		};
+		DE7894801FF38C590060AE7A /* ZRKvoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE7894811FF38C7F0060AE7A /* ZRBoss.h */,
+				DE7894821FF38C7F0060AE7A /* ZRBoss.m */,
+				DE7894841FF38C8C0060AE7A /* ZRWorker.h */,
+				DE7894851FF38C8C0060AE7A /* ZRWorker.m */,
+			);
+			path = ZRKvoDemo;
+			sourceTree = "<group>";
+		};
 		DEBE6F571FEE072100CD0854 /* ZRRuntimeDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +406,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DE7894801FF38C590060AE7A /* ZRKvoDemo */,
 				DEBE6F571FEE072100CD0854 /* ZRRuntimeDemo */,
 				DED5C2801FE5218F0022BA5B /* ZRTabBarPageDemo */,
 				DED5C2621FE505E80022BA5B /* ZRGridViewDemo */,
@@ -599,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED5C2751FE517C90022BA5B /* ZRGridViewCell.m in Sources */,
+				DE7894831FF38C7F0060AE7A /* ZRBoss.m in Sources */,
 				DED5C27E1FE51CFF0022BA5B /* MDTabBar.m in Sources */,
 				DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */,
 				DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */,
@@ -616,6 +635,7 @@
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
 				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
 				DED5C2741FE517C90022BA5B /* ZRGridView.m in Sources */,
+				DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */,
 				DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */,
 				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
 				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
@@ -762,6 +782,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -778,6 +799,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
