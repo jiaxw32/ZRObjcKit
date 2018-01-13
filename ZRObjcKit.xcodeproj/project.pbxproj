@@ -51,6 +51,7 @@
 		DED5C27F1FE51CFF0022BA5B /* MDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C27D1FE51CFF0022BA5B /* MDTabBarViewController.m */; };
 		DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2821FE521B40022BA5B /* ZRTabBarViewController.m */; };
 		DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */; };
+		DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +144,8 @@
 		DED5C2841FE5225E0022BA5B /* ZRObjcKitConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRObjcKitConstant.h; sourceTree = "<group>"; };
 		DED7CF202009F656006B8B34 /* ZRKeyValueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKeyValueTableViewCell.h; sourceTree = "<group>"; };
 		DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKeyValueTableViewCell.m; sourceTree = "<group>"; };
+		DED7CF242009FD0F006B8B34 /* ZRMultiOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMultiOperationView.h; sourceTree = "<group>"; };
+		DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMultiOperationView.m; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -442,6 +445,7 @@
 		DED5C2661FE510FE0022BA5B /* ZRUILIb */ = {
 			isa = PBXGroup;
 			children = (
+				DED7CF232009FD0F006B8B34 /* ZRMultiOperationView */,
 				DED7CF1F2009F656006B8B34 /* ZRKeyValueTableViewCell */,
 				DED5C2791FE51CFF0022BA5B /* MDTabBar */,
 				DED5C26B1FE517C90022BA5B /* ZRGridView */,
@@ -501,6 +505,15 @@
 				DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */,
 			);
 			path = ZRKeyValueTableViewCell;
+			sourceTree = "<group>";
+		};
+		DED7CF232009FD0F006B8B34 /* ZRMultiOperationView */ = {
+			isa = PBXGroup;
+			children = (
+				DED7CF242009FD0F006B8B34 /* ZRMultiOperationView.h */,
+				DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */,
+			);
+			path = ZRMultiOperationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +648,7 @@
 				DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */,
 				DEC167D61FDD23AF00B1575F /* ViewController.m in Sources */,
 				DE1A4B4E1FE0164100471AAF /* UIControl+ZRTracking.m in Sources */,
+				DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */,
 				DE1A4B4C1FE0164100471AAF /* UIApplication+ZRTracking.m in Sources */,
 				DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */,
 				DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */,
