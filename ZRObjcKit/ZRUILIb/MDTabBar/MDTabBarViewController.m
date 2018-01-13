@@ -35,7 +35,7 @@
 }
 
 - (instancetype)initWithDelegate:(id)delegate {
-    return [[MDTabBarViewController alloc] initWithDelegate:delegate tabbarHeight:kMDTabBarHeight];
+    return [[MDTabBarViewController alloc] initWithDelegate:delegate tabbarHeight:kMDTabBarDefaultHeight];
 }
 
 - (instancetype)initWithDelegate:(id<MDTabBarViewControllerDelegate>)delegate tabbarHeight:(CGFloat)height {

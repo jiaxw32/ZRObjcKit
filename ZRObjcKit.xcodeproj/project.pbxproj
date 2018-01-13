@@ -50,6 +50,7 @@
 		DED5C27E1FE51CFF0022BA5B /* MDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C27B1FE51CFF0022BA5B /* MDTabBar.m */; };
 		DED5C27F1FE51CFF0022BA5B /* MDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C27D1FE51CFF0022BA5B /* MDTabBarViewController.m */; };
 		DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2821FE521B40022BA5B /* ZRTabBarViewController.m */; };
+		DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,8 @@
 		DED5C2811FE521B40022BA5B /* ZRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTabBarViewController.h; sourceTree = "<group>"; };
 		DED5C2821FE521B40022BA5B /* ZRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTabBarViewController.m; sourceTree = "<group>"; };
 		DED5C2841FE5225E0022BA5B /* ZRObjcKitConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRObjcKitConstant.h; sourceTree = "<group>"; };
+		DED7CF202009F656006B8B34 /* ZRKeyValueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKeyValueTableViewCell.h; sourceTree = "<group>"; };
+		DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKeyValueTableViewCell.m; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -439,6 +442,7 @@
 		DED5C2661FE510FE0022BA5B /* ZRUILIb */ = {
 			isa = PBXGroup;
 			children = (
+				DED7CF1F2009F656006B8B34 /* ZRKeyValueTableViewCell */,
 				DED5C2791FE51CFF0022BA5B /* MDTabBar */,
 				DED5C26B1FE517C90022BA5B /* ZRGridView */,
 				DED5C2671FE510FE0022BA5B /* ZRPickertView */,
@@ -488,6 +492,15 @@
 				DED5C2821FE521B40022BA5B /* ZRTabBarViewController.m */,
 			);
 			path = ZRTabBarPageDemo;
+			sourceTree = "<group>";
+		};
+		DED7CF1F2009F656006B8B34 /* ZRKeyValueTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DED7CF202009F656006B8B34 /* ZRKeyValueTableViewCell.h */,
+				DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */,
+			);
+			path = ZRKeyValueTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,6 +653,7 @@
 				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
 				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
 				DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */,
+				DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */,
 				DED5C26A1FE5113F0022BA5B /* ZRPickerView.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
 				DED5C2651FE506160022BA5B /* ZRGridViewController.m in Sources */,
@@ -782,7 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -799,7 +813,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxw.ZRObjcKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
