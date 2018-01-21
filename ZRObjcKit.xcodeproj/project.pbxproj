@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4A6DC071B447BA00309F1C3 /* libPods-ZRObjcKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */; };
+		DE0569A3201483B700F10E38 /* ZRStepStatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0569A2201483B700F10E38 /* ZRStepStatisticViewController.m */; };
 		DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B1E1FE0158A00471AAF /* ZRFileInfoModel.m */; };
 		DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B211FE0158A00471AAF /* ZRFileTableViewCell.m */; };
 		DE1A4B2B1FE0158A00471AAF /* ZRFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B241FE0158A00471AAF /* ZRFileListViewController.m */; };
@@ -27,6 +28,7 @@
 		DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.m */; };
 		DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B581FE0BAD300471AAF /* TODO.md */; };
 		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
+		DE75DE45201479EE00CD28C5 /* ZRStepStatisticView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75DE44201479EE00CD28C5 /* ZRStepStatisticView.m */; };
 		DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */; };
 		DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */; };
 		DE7894831FF38C7F0060AE7A /* ZRBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894821FF38C7F0060AE7A /* ZRBoss.m */; };
@@ -60,6 +62,8 @@
 		8F7EDB6B9678A0A0B7044F9D /* Pods-ZRObjcKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRObjcKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit.release.xcconfig"; sourceTree = "<group>"; };
 		CB3EFB29EF70196A90659FC8 /* Pods-ZRObjcKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRObjcKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRObjcKit/Pods-ZRObjcKit.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C37DBD3A7EA49FC39670AF /* libPods-ZRObjcKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRObjcKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0569A1201483B700F10E38 /* ZRStepStatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStepStatisticViewController.h; sourceTree = "<group>"; };
+		DE0569A2201483B700F10E38 /* ZRStepStatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStepStatisticViewController.m; sourceTree = "<group>"; };
 		DE1A4B1D1FE0158A00471AAF /* ZRFileInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileInfoModel.h; sourceTree = "<group>"; };
 		DE1A4B1E1FE0158A00471AAF /* ZRFileInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRFileInfoModel.m; sourceTree = "<group>"; };
 		DE1A4B201FE0158A00471AAF /* ZRFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRFileTableViewCell.h; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		DE1A4B561FE019CA00471AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE1A4B581FE0BAD300471AAF /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		DE75DE43201479EE00CD28C5 /* ZRStepStatisticView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStepStatisticView.h; sourceTree = "<group>"; };
+		DE75DE44201479EE00CD28C5 /* ZRStepStatisticView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStepStatisticView.m; sourceTree = "<group>"; };
 		DE7894771FF0A40A0060AE7A /* NSObject+ZRDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZRDebug.h"; sourceTree = "<group>"; };
 		DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZRDebug.m"; sourceTree = "<group>"; };
 		DE78947D1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZRDeallocObserve.h"; sourceTree = "<group>"; };
@@ -181,6 +187,15 @@
 				8F7EDB6B9678A0A0B7044F9D /* Pods-ZRObjcKit.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE0569A02014838300F10E38 /* ZRStepStatisticViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE0569A1201483B700F10E38 /* ZRStepStatisticViewController.h */,
+				DE0569A2201483B700F10E38 /* ZRStepStatisticViewController.m */,
+			);
+			path = ZRStepStatisticViewDemo;
 			sourceTree = "<group>";
 		};
 		DE1A4B1A1FE0158A00471AAF /* ZRFileModule */ = {
@@ -301,6 +316,15 @@
 			path = ZRTrackingManager;
 			sourceTree = "<group>";
 		};
+		DE75DE42201479EE00CD28C5 /* ZRStepStatisticView */ = {
+			isa = PBXGroup;
+			children = (
+				DE75DE43201479EE00CD28C5 /* ZRStepStatisticView.h */,
+				DE75DE44201479EE00CD28C5 /* ZRStepStatisticView.m */,
+			);
+			path = ZRStepStatisticView;
+			sourceTree = "<group>";
+		};
 		DE7894761FF0A3CF0060AE7A /* ZRTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +436,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DE0569A02014838300F10E38 /* ZRStepStatisticViewDemo */,
 				DE7894801FF38C590060AE7A /* ZRKvoDemo */,
 				DEBE6F571FEE072100CD0854 /* ZRRuntimeDemo */,
 				DED5C2801FE5218F0022BA5B /* ZRTabBarPageDemo */,
@@ -445,6 +470,7 @@
 		DED5C2661FE510FE0022BA5B /* ZRUILIb */ = {
 			isa = PBXGroup;
 			children = (
+				DE75DE42201479EE00CD28C5 /* ZRStepStatisticView */,
 				DED7CF232009FD0F006B8B34 /* ZRMultiOperationView */,
 				DED7CF1F2009F656006B8B34 /* ZRKeyValueTableViewCell */,
 				DED5C2791FE51CFF0022BA5B /* MDTabBar */,
@@ -651,6 +677,7 @@
 				DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */,
 				DE1A4B4C1FE0164100471AAF /* UIApplication+ZRTracking.m in Sources */,
 				DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */,
+				DE0569A3201483B700F10E38 /* ZRStepStatisticViewController.m in Sources */,
 				DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */,
 				DEBE6F5B1FEE079600CD0854 /* ZRPerson.m in Sources */,
 				DED5C2761FE517C90022BA5B /* ZRGridViewHeader.m in Sources */,
@@ -661,6 +688,7 @@
 				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
 				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
+				DE75DE45201479EE00CD28C5 /* ZRStepStatisticView.m in Sources */,
 				DED5C2741FE517C90022BA5B /* ZRGridView.m in Sources */,
 				DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */,
 				DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */,

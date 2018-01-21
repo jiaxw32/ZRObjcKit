@@ -20,6 +20,7 @@
 #import <objc/runtime.h>
 #import "ZRBoss.h"
 #import "ZRWorker.h"
+#import "ZRStepStatisticViewController.h"
 
 @interface ViewController ()
 
@@ -90,8 +91,11 @@
 //    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
-    [self.navigationController pushViewController:tabBarViewController animated:YES];
+//    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
+//    [self.navigationController pushViewController:tabBarViewController animated:YES];
+    
+    ZRStepStatisticViewController *vc = [[ZRStepStatisticViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
     /*
     ZRPickerView *pickerView = [[ZRPickerView alloc] init];
