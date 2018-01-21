@@ -15,8 +15,6 @@ typedef NS_ENUM(NSUInteger, ZRStepStatisticType) {
 
 @interface ZRStepStatisticView : UIView
 
-@property (nonatomic,assign) ZRStepStatisticType selectedPeriodType;
-
 @property (nonatomic,copy) NSArray<NSDictionary *> *weekDataArray;
 
 @property (nonatomic,copy) NSArray<NSDictionary *> *monthDataArray;

@@ -26,10 +26,6 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
 
 @interface ZRStepStatisticView ()
 
-@property (nonatomic,strong) UIColor *startColor;
-
-@property (nonatomic,strong) UIColor *endColor;
-
 @property (nonatomic,strong) NSArray *data;
 
 @property (nonatomic,strong) UILabel *lblTodaySteps;
@@ -37,6 +33,8 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
 @property (nonatomic,strong) UIButton *btnWeek;
 
 @property (nonatomic,strong) UIButton *btnMonth;
+
+@property (nonatomic,assign) ZRStepStatisticType selectedStatisticType;
 
 @property (nonatomic,strong) UIView *selectIndicatorLine;
 
@@ -49,7 +47,6 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
 @property (nonatomic,copy) calculateMaxValueBlock calculateMaxValue;
 
 @property (nonatomic,assign) CGFloat curPostionX;
-
 
 /**
  业绩最小值，可能为负，最大为0
@@ -274,9 +271,7 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
 #pragma mark - data
 
 - (void)initialData{
-    _startColor = UIColorFromRGB(0x5A6BEE);
-    _endColor = UIColorFromRGB(0x46B2FE);
-    _selectedPeriodType = ZRStepStatisticTypeWeek;
+    _selectedStatisticType = ZRStepStatisticTypeWeek;
     _labelArray = [NSMutableArray new];
 }
 
@@ -421,7 +416,7 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
 
 - (void)onButtonClick:(UIButton *)sender{
     if (sender.tag == ZRStepStatisticTypeWeek && !sender.selected) {//本周
-        self.selectedPeriodType = sender.tag;
+        self.selectedStatisticType = sender.tag;
         self.vStepsValueLine.hidden = YES;
         self.lblCurrentSteps.hidden = YES;
         self.btnWeek.selected = YES;
@@ -438,7 +433,7 @@ typedef CGFloat(^calculateMaxValueBlock)(NSArray *);
             _onStatisticTypeChangedHanlder(self, sender.tag);
         }
     } else if (sender.tag == ZRStepStatisticTypeMonth && !sender.selected){//本月
-        self.selectedPeriodType = sender.tag;
+        self.selectedStatisticType = sender.tag;
         self.vStepsValueLine.hidden = YES;
         self.lblCurrentSteps.hidden = YES;
         self.btnWeek.selected = NO;
