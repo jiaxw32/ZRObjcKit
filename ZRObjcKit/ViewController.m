@@ -23,7 +23,26 @@
 #import "ZRStepStatisticViewController.h"
 #import "ZRCustomCalendarViewController.h"
 
-@interface ViewController ()
+typedef NS_ENUM(NSUInteger, ZRFunctionType) {
+    ZRFunctionTypeUnknown = 0,
+    ZRFunctionTypeMessageForward,       //消息转发
+    ZRFunctionTypeClassConstruction,    //类的构造
+    ZRFunctionTypeKVOExplore,           //KVO原理
+    ZRFunctionTypeSandboxBrowser,       //沙盒文件浏览
+    ZRFunctionTypeMainBundleBrowser,    //Bundle文件浏览
+    ZRFunctionTypeTextViewAutoSize,     //TextView高度自适应
+    ZRFunctionTypeGridViewDemo,         //GridView
+    ZRFunctionTypeCopyWeChatStepStatisticDemo, //仿微信运动步数统计图
+    ZRFunctionTypeCustomCalendar,       //自定义日历组件
+    ZRFunctionTypeOneDimensionPickerView,   //一维PickerView
+    ZRFunctionTypeTwoDimensionPickerView,   //二维PikcerView
+};
+
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableivew;
+
+@property (nonatomic,copy) NSArray *functionList;
 
 @end
 
@@ -33,33 +52,213 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    
-//    [ZRPerson zr_debugVariables:NO];
-//    [ZRPerson zr_debugProperties:NO];
-//    
-//    [ZRPerson zr_debugInstanceMethods:NO];
-//    [ZRPerson zr_debugClassMethods:NO];
-    
-    
-//    ZRPerson *person = [[ZRPerson alloc] init];
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Wundeclared-selector"
-//    [person performSelector:@selector(eat)];
-//    [person performSelector:@selector(swim)];
-//    [person performSelector:@selector(fly)];
-//    [person performSelector:@selector(program)];
-//#pragma clang diagnostic pop
-    
-    [self kvo_test];
-
+    [self loadData];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
 }
-- (IBAction)onButtonClick:(id)sender {
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - DATA
+
+- (void)loadData{
+    self.functionList = @[
+                          @{
+                              @"header" : @"Runtime",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"message forward",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeMessageForward)
+                                        },
+                                      @{
+                                          @"title" : @"construction of class",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeClassConstruction)
+                                          },
+                                      @{
+                                          @"title" : @"KVO principle explore",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeKVOExplore)
+                                          },
+                                      ],
+                              },
+                          @{
+                              @"header" : @"File Manager",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"sandbox file browser",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeSandboxBrowser)
+                                          },
+                                      @{
+                                          @"title" : @"main bundle file browser",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeMainBundleBrowser)
+                                          },
+                                      ],
+                              },
+                          @{
+                              @"header" : @"UI components",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"copy WeChat step statistic graphic",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeCopyWeChatStepStatisticDemo)
+                                          },
+                                      @{
+                                          @"title" : @"custom calendar demo",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeCustomCalendar)
+                                          },
+                                      @{
+                                          @"title" : @"custom gridview demo",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeGridViewDemo)
+                                          },
+                                      @{
+                                          @"title" : @"textview autosize demo",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeTextViewAutoSize)
+                                          },
+                                      @{
+                                          @"title" : @"one dimension pickerview",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeOneDimensionPickerView)
+                                          },
+                                      @{
+                                          @"title" : @"two dimension pickerview",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeTwoDimensionPickerView)
+                                          },
+                                      ],
+                              },
+                          ];
+}
+
+
+#pragma mark - UITableViewDelgate and Datasource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.functionList.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSDictionary *function = _functionList[section];
+    NSArray *functionItems = function[@"functionItems"];
+    return functionItems.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 48.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return CGFLOAT_MIN;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSDictionary *function = _functionList[indexPath.section];
+    NSArray *functionItems = function[@"functionItems"];
+    NSDictionary *functionItem = functionItems[indexPath.row];
+    cell.textLabel.text = functionItem[@"title"];
+    if ([function[@"showIndicator"] boolValue]) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    NSDictionary *function = _functionList[section];
+    NSString *header = function[@"header"];
     
+    UIView *headerView = [[UIView alloc] init];
+    UILabel *lblTitle = ({
+        UILabel *lbl = [UILabel new];
+        lbl.text = header;
+        lbl.font = [UIFont systemFontOfSize:16];
+        lbl.textColor = UIColorFromRGB(0x444444);
+        [headerView addSubview:lbl];
+        lbl;
+    });
+    [lblTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(headerView);
+        make.left.equalTo(headerView).offset(16);
+    }];
+    return headerView;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *function = _functionList[indexPath.section];
+    NSArray *functionItems = function[@"functionItems"];
+    NSDictionary *functionItem = functionItems[indexPath.row];
+    ZRFunctionType functionType = [functionItem[@"funtionType"] integerValue];
+    switch (functionType) {
+        case ZRFunctionTypeMessageForward:
+            [self messageForwardTest];
+            break;
+        case ZRFunctionTypeClassConstruction:
+            [self clsConstructionExplore];
+            break;
+        case ZRFunctionTypeKVOExplore:
+            [self kvoExploreDemo];
+            break;
+        case ZRFunctionTypeGridViewDemo:
+            [self customGridViewDemo];
+            break;
+        case ZRFunctionTypeCustomCalendar:
+            [self customCalendarViewDemo];
+            break;
+        case ZRFunctionTypeSandboxBrowser:
+            [self sandboxDirectoryBrowser];
+            break;
+        case ZRFunctionTypeTextViewAutoSize:
+            [self textViewAutoSizeDemo];
+            break;
+        case ZRFunctionTypeMainBundleBrowser:
+            [self mainBundleBrowser];
+            break;
+        case ZRFunctionTypeCopyWeChatStepStatisticDemo:
+            [self copyWeiChatStepStatisticDemo];
+            break;
+        case ZRFunctionTypeOneDimensionPickerView:
+            [self pickerViewDemoWithOneDimension];
+            break;
+        case ZRFunctionTypeTwoDimensionPickerView:
+            [self pikerViewDemoWithTwoDimension];
+            break;
+        default:
+            break;
+    }
+}
+
+
+#pragma mark - function
+
+#pragma mark File
+
+
+/**
+ 沙盒文件浏览
+ */
+- (void)sandboxDirectoryBrowser{
     UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
     ZRFileListViewController *fileListViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
     [fileListViewController observeDeallocWithBlock:^{
@@ -71,7 +270,11 @@
     }
 }
 
-- (IBAction)onMainBundleButtonClick:(id)sender {
+
+/**
+ MainBundle文件浏览
+ */
+- (void)mainBundleBrowser{
     UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"ZRFileStoryboard" bundle:[NSBundle mainBundle]];
     ZRFileListViewController *fileListViewController = [fileStoryboard instantiateViewControllerWithIdentifier:@"fileListViewController"];
     fileListViewController.filePath = [NSBundle mainBundle].bundlePath;
@@ -79,29 +282,71 @@
         [self.navigationController pushViewController:fileListViewController animated:YES];
     }
 }
-- (IBAction)onTextViewAutoSizeButtonClickHandler:(id)sender {
+
+#pragma mark UI
+
+
+/**
+ TextView高度自适应Demo
+ */
+- (void)textViewAutoSizeDemo{
 //    UIStoryboard *fileStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 //    ZRTextViewAutoSizeViewController *textViewAutoSizeVC = [fileStoryboard instantiateViewControllerWithIdentifier:@"ZRTextViewAutoSizeScene"];
 //    if (textViewAutoSizeVC) {
 //        [self.navigationController pushViewController:textViewAutoSizeVC animated:YES];
 //    }
-    
+//    
 //    ZRTextViewAutoSizeExViewController *vc = [[ZRTextViewAutoSizeExViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-//    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-//    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
-//    [self.navigationController pushViewController:tabBarViewController animated:YES];
-    
-//    ZRStepStatisticViewController *vc = [[ZRStepStatisticViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
+    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
+    [self.navigationController pushViewController:tabBarViewController animated:YES];
+}
+
+
+/**
+ 自定义gridview，展示多行多列数据
+ */
+- (void)customGridViewDemo{
+    ZRGridViewController *vc = [[ZRGridViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+/**
+ 仿微信运动拆线图
+ */
+- (void)copyWeiChatStepStatisticDemo{
+    ZRStepStatisticViewController *vc = [[ZRStepStatisticViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+/**
+ 自定义日历组件
+ */
+- (void)customCalendarViewDemo{
     ZRCustomCalendarViewController *vc = [[ZRCustomCalendarViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-    
-    /*
+}
+
+
+/**
+ 一维PickerView
+ */
+- (void)pickerViewDemoWithOneDimension{
+    ZRPickerView *pickerView = [[ZRPickerView alloc] init];
+    pickerView.levelOneDataSource = @[@"河北",@"山西",@"河南",@"山东"];
+    pickerView.okClickBlock = ^(ZRPickerView *sender, NSInteger firstColSelectedIndex, NSInteger secondColSelectedIndex) {
+        
+    };
+    [pickerView show];
+}
+
+
+/**
+ 二维PickerView
+ */
+- (void)pikerViewDemoWithTwoDimension{
     ZRPickerView *pickerView = [[ZRPickerView alloc] init];
     pickerView.pickerViewHeight = 480;
     pickerView.numberOfComponents = 2;
@@ -113,20 +358,18 @@
                                       @[@"济南",@"青岛",@"威海",@"蓬莱",@"泰安",@"烟台"],
                                       ];
     pickerView.okClickBlock = ^(ZRPickerView *sender, NSInteger firstColSelectedIndex, NSInteger secondColSelectedIndex) {
-        //TODO: do you want to do
+        //TODO: do something here
     };
     [pickerView show];
-     */
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark KVO Explore
 
-- (void)kvo_test{
-//    ZRBoss *boss = [[ZRBoss alloc] init];
-    
+
+/**
+ KVO实现原理
+ */
+- (void)kvoExploreDemo{
     ZRWorker *normalWorker = [[ZRWorker alloc] init];
     ZRWorker *observedWorkerA = [[ZRWorker alloc] init];
     ZRWorker *observedWorkerB = [[ZRWorker alloc] init];
@@ -158,6 +401,7 @@
     [observedWorkerC removeObserver:observedWorkerC forKeyPath:@"workStatus"];
 }
 
+
 static NSArray *ClassMethodNames(Class c)
 {
     NSMutableArray *array = [NSMutableArray array];
@@ -174,10 +418,6 @@ static NSArray *ClassMethodNames(Class c)
 
 static void printDescription(NSString *name, id obj){
     
-//    ((objc_object *)obj).isa;
-    
-    
-    
     NSString *str = [NSString stringWithFormat:
                      @"%@: %@\n\tNSObject class %s\n\tlibobjc class %s\n\timplements methods <%@>",
                      name,
@@ -188,5 +428,35 @@ static void printDescription(NSString *name, id obj){
                      ];
     printf("%s\n", [str UTF8String]);
 }
+
+#pragma mark Runtime
+
+
+/**
+ 类的构造之属性、变量、方法
+ */
+- (void)clsConstructionExplore{
+    [ZRPerson zr_debugVariables:NO];
+    [ZRPerson zr_debugProperties:NO];
+    
+    [ZRPerson zr_debugInstanceMethods:NO];
+    [ZRPerson zr_debugClassMethods:NO];
+}
+
+
+/**
+ 消息转发测试
+ */
+- (void)messageForwardTest{
+    ZRPerson *person = [[ZRPerson alloc] init];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    [person performSelector:@selector(eat)];
+    [person performSelector:@selector(swim)];
+    [person performSelector:@selector(fly)];
+    [person performSelector:@selector(program)];
+#pragma clang diagnostic pop
+}
+
 
 @end
