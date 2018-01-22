@@ -21,6 +21,7 @@
 #import "ZRBoss.h"
 #import "ZRWorker.h"
 #import "ZRStepStatisticViewController.h"
+#import "ZRCustomCalendarViewController.h"
 
 @interface ViewController ()
 
@@ -94,7 +95,10 @@
 //    ZRTabBarViewController *tabBarViewController = [[ZRTabBarViewController alloc] init];
 //    [self.navigationController pushViewController:tabBarViewController animated:YES];
     
-    ZRStepStatisticViewController *vc = [[ZRStepStatisticViewController alloc] init];
+//    ZRStepStatisticViewController *vc = [[ZRStepStatisticViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    ZRCustomCalendarViewController *vc = [[ZRCustomCalendarViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
     /*

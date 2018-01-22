@@ -37,7 +37,7 @@
     contentView.backgroundColor = [UIColor whiteColor];
     
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    self.statisticView = [[ZRStepStatisticView alloc] initWithFrame:CGRectMake(0, 100, width, 274)];
+    self.statisticView = [[ZRStepStatisticView alloc] initWithFrame:CGRectMake(0, 0, width, 274)];
     
     id __weak weakSelf = self;
     self.statisticView.onStatisticTypeChangedHanlder = ^(ZRStepStatisticView *sender, ZRStepStatisticType selectedStatisticType) {
