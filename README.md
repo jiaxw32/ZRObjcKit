@@ -26,12 +26,12 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ### 日历组件
 
-一个自定义的日历选择组件。
+一个自定义的日历选择组件。                     
 ![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png)
 
 ### ZRGridView
 
-类似Excel表格，用于展示多行多列的表格数据的组件。
+类似Excel表格，用于展示多行多列的表格数据的组件。       
 ![](https://raw.githubusercontent.com/jiaxw32/ZRGridView/master/ZRGridView/ZRGridView/gridview.gif)
 
 ### ZRPickerView
