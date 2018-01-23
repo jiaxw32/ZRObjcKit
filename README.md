@@ -17,12 +17,14 @@ ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存�
 ### FileBrowser
 
 FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息，文件分享导出。
-![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/fileBrowser.png)
+
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/fileBrowser.png" width="320">
 
 ### 拆线图绘制
 
 自定义绘制拆线图，类似微信运动步数统计，支持查看周数据、月数据，数据随机生成。
-![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/polylineGraphic.png)
+
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/polylineGraphic.png" width="320">
 
 ### 日历组件
 
@@ -33,13 +35,14 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 ### ZRGridView
 
 类似Excel表格，用于展示多行多列的表格数据。       
-![](https://raw.githubusercontent.com/jiaxw32/ZRGridView/master/ZRGridView/ZRGridView/gridview.gif)
+
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRGridView/master/ZRGridView/ZRGridView/gridview.gif" width="320">
 
 ### ZRPickerView
 
 基于UIPickerView封装的数据选择框，支持一维、二维数据。
 
-![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/pickerview.png)
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/pickerview.png" width="320">
 
 ### TextViewAutoSizeDemo
 
