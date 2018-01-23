@@ -4,7 +4,7 @@ ZRObjcKit包括一些自定义组件和探索Objective-C原理的Demo。
 
 ## ZRTracking
 
-ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，功能包括：
+ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据存储于sqlite db，功能包括：
 
 * App启动、运行记录
 * 页面访问及存留时长记录
@@ -16,7 +16,7 @@ ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存�
 
 ### FileBrowser
 
-FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息，文件分享导出。
+FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息，分享导出文件。
 
 <img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/fileBrowser.png" width="320">
 
@@ -28,7 +28,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ### 日历组件
 
-一个自定义的日历组件。
+一个自定义的日历组件，支持最大、最小日期设置、日期选择、高亮显示指定日期。
 
 <img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png" width="320">
 
@@ -48,7 +48,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 一个TextView高度自适应及键盘事件处理Demo。
 
-## 其他
+## Objective-C探索
 
 * 类的构造
 
@@ -61,7 +61,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
     ```Objctive-C
     ZRPerson *personC = [[ZRPerson alloc] init];
     [personC observeDeallocWithBlock:^{
-        //personC销毁时回调
-        NSLog(@"Person C dealloc");
+        //invoke when the object dealloc
+        NSLog(@"Person C dealloc");
     }];
     ```
