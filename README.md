@@ -19,6 +19,7 @@ ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据存储�
 FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息，分享导出文件。
 
 <img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/fileBrowser.png" width="320">
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/fileInfo.png" width="320">
 
 ### 拆线图绘制
 
