@@ -6,7 +6,7 @@
 //  Copyright © 2017年 jiaxw. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "ZRFileHelper.h"
 #import "ZRFileListViewController.h"
 #import "ZRTextViewAutoSizeViewController.h"
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeStringDealloc,    //字符串销毁
 };
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableivew;
 
@@ -47,7 +47,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

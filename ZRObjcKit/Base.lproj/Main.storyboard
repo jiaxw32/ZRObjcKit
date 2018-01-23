@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="aW2-Kg-19U">
             <objects>
-                <viewController id="hE0-dz-mFu" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="hE0-dz-mFu" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hbc-L9-Qdg"/>
                         <viewControllerLayoutGuide type="bottom" id="h57-Qh-1uj"/>
@@ -128,11 +128,11 @@
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="-410.64467766116945"/>
         </scene>
-        <!--首页-->
+        <!--Home-->
         <scene sceneID="fA5-ab-yRf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5i4-cb-AiD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="7OZ-8c-FPO"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="7OZ-8c-FPO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ncK-CR-OYN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
