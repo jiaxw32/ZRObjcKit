@@ -26,8 +26,9 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ### 日历组件
 
-一个自定义的日历组件。                                 
-![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png)
+一个自定义的日历组件。
+
+<img src="https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png" width="320">
 
 ### ZRGridView
 
