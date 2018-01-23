@@ -1,10 +1,10 @@
 # ZRObjcKit
 
-ZRObjcKit是我Objctive-C学习过程中部分练习Demo和封装组件，包括以下内容：
+ZRObjcKit包括一些自定义组件和探究Objective-C原理的Demo。
 
 ## ZRTracking
 
-ZRTracking基于OC Runtime，实现iOS无埋点技术方案，埋点数据暂存于sqlite db，主要包括以下功能：
+ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，主要包括以下功能：
 
 * App启动、运行记录
 * 页面访问及存留时长记录
@@ -21,22 +21,22 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ### 拆线图绘制
 
-类似微信运动步数统计，自定义绘制的拆线图，支持查看周数据、月数据，数据随机生成。
+自定义绘制拆线图，类似微信运动步数统计，支持查看周数据、月数据，数据随机生成。
 ![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/polylineGraphic.png)
 
 ### 日历组件
 
-一个自定义的日历选择组件。                     
+一个自定义的日历组件。                   
 ![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png)
 
 ### ZRGridView
 
-类似Excel表格，用于展示多行多列的表格数据的组件。       
+类似Excel表格，用于展示多行多列的表格数据。       
 ![](https://raw.githubusercontent.com/jiaxw32/ZRGridView/master/ZRGridView/ZRGridView/gridview.gif)
 
 ### ZRPickerView
 
-基于UIPickerView封装的数据选择组件，支持一维、二维数据。
+基于UIPickerView封装的数据选择框，支持一维、二维数据。
 
 ![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/pickerview.png)
 
