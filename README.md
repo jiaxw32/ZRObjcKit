@@ -48,7 +48,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 一个TextView高度自适应及键盘事件处理Demo。
 
-## Objective-C探索
+## Objective-C探索
 
 * 类的构造
 
