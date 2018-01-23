@@ -4,7 +4,7 @@ ZRObjcKit包括一些自定义组件和探索Objective-C原理的Demo。
 
 ## ZRTracking
 
-ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，实现功能包括：
+ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，功能包括：
 
 * App启动、运行记录
 * 页面访问及存留时长记录
@@ -61,6 +61,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
     ```Objctive-C
     ZRPerson *personC = [[ZRPerson alloc] init];
     [personC observeDeallocWithBlock:^{
-        NSLog(@"Person C dealloc");
+        //personC销毁时回调
+        NSLog(@"Person C dealloc");
     }];
     ```
