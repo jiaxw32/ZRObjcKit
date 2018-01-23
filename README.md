@@ -65,3 +65,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
         NSLog(@"Person C dealloc");
     }];
     ```
+
+## LICENSE
+
+项目使用 MIT LICENSE，详情见 LICENSE 文件。
