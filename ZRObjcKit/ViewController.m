@@ -18,7 +18,6 @@
 #import "ZRPerson.h"
 #import "NSObject+ZRDeallocObserve.h"
 #import <objc/runtime.h>
-#import "ZRBoss.h"
 #import "ZRWorker.h"
 #import "ZRStepStatisticViewController.h"
 #import "ZRCustomCalendarViewController.h"
@@ -36,6 +35,8 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeCustomCalendar,       //自定义日历组件
     ZRFunctionTypeOneDimensionPickerView,   //一维PickerView
     ZRFunctionTypeTwoDimensionPickerView,   //二维PikcerView
+    ZRFunctionTypeObjectDealloc,    //对象销毁
+    ZRFunctionTypeStringDealloc,    //字符串销毁
 };
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -86,6 +87,21 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"title" : @"KVO principle explore",
                                           @"showIndicator" : @(NO),
                                           @"funtionType" : @(ZRFunctionTypeKVOExplore)
+                                          },
+                                      ],
+                              },
+                          @{
+                              @"header" : @"Memory Manage",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"object dealloc",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeObjectDealloc)
+                                          },
+                                      @{
+                                          @"title" : @"string dealloc",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeStringDealloc)
                                           },
                                       ],
                               },
@@ -243,6 +259,12 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
             break;
         case ZRFunctionTypeTwoDimensionPickerView:
             [self pikerViewDemoWithTwoDimension];
+            break;
+        case ZRFunctionTypeObjectDealloc:
+            [self objectDeallocTest];
+            break;
+        case ZRFunctionTypeStringDealloc:
+            [self stringDeallocTest];
             break;
         default:
             break;
@@ -456,6 +478,59 @@ static void printDescription(NSString *name, id obj){
     [person performSelector:@selector(fly)];
     [person performSelector:@selector(program)];
 #pragma clang diagnostic pop
+}
+
+#pragma mark Memory Manage
+
+ZRPerson *personA;
+
+
+
+- (void)objectDeallocTest{
+    
+    NSLog(@"%s", __func__);
+    
+    personA = [[ZRPerson alloc] init];
+    [personA observeDeallocWithBlock:^{
+        NSLog(@"Person A dealloc");
+    }];
+    
+    @autoreleasepool {
+        ZRPerson *personB = [[ZRPerson alloc] init];
+        [personB observeDeallocWithBlock:^{
+            NSLog(@"Person B dealloc");
+        }];
+    }
+    
+    ZRPerson *personC = [[ZRPerson alloc] init];
+    [personC observeDeallocWithBlock:^{
+        NSLog(@"Person C dealloc");
+    }];
+    
+}
+
+NSString *stringA;
+
+- (void)stringDeallocTest{
+    NSLog(@"%s", __func__);
+    
+    stringA = @"String A";
+    [stringA observeDeallocWithBlock:^{
+        NSLog(@"%@ dealloc", stringA);
+    }];
+    
+    @autoreleasepool {
+        NSString *stringB = @"String B";
+        [stringB observeDeallocWithBlock:^{
+            NSLog(@"%@ dealloc", stringB);
+        }];
+    };
+
+    NSString *stringC = @"String C";
+    [stringC observeDeallocWithBlock:^{
+        NSLog(@"%@ dealloc", stringC);
+    }];
+    
 }
 
 
