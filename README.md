@@ -1,10 +1,10 @@
 # ZRObjcKit
 
-ZRObjcKit包括一些自定义组件和探究Objective-C原理的Demo。
+ZRObjcKit包括一些自定义组件和探索Objective-C原理的Demo。
 
 ## ZRTracking
 
-ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，主要包括以下功能：
+ZRTracking基于OC Runtime，实现iOS App无埋点技术方案，数据暂存于sqlite db，实现功能包括：
 
 * App启动、运行记录
 * 页面访问及存留时长记录
@@ -26,7 +26,7 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ### 日历组件
 
-一个自定义的日历组件。                   
+一个自定义的日历组件。                                 
 ![](https://raw.githubusercontent.com/jiaxw32/ZRObjcKit/master/ZRObjcKit/Resource/customCalendar.png)
 
 ### ZRGridView
@@ -46,10 +46,17 @@ FileBrowser支持浏览App沙盒、Bundle文件目录结构，查看文件信息
 
 ## 其他
 
-### 类的构造
+* 类的构造
 
-### 消息转发测试Demo
+* 消息转发测试Demo
 
-### KVO原理探究Demo
+* KVO原理探究Demo
 
-### 对象销毁监测Demo
+* 对象销毁监测Demo
+
+    ```Objctive-C
+    ZRPerson *personC = [[ZRPerson alloc] init];
+    [personC observeDeallocWithBlock:^{
+        NSLog(@"Person C dealloc");
+    }];
+    ```
