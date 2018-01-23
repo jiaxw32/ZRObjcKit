@@ -71,41 +71,6 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
 - (void)loadData{
     self.functionList = @[
                           @{
-                              @"header" : @"Runtime",
-                              @"functionItems" : @[
-                                      @{
-                                          @"title" : @"message forward",
-                                          @"showIndicator" : @(NO),
-                                          @"funtionType" : @(ZRFunctionTypeMessageForward)
-                                        },
-                                      @{
-                                          @"title" : @"construction of class",
-                                          @"showIndicator" : @(NO),
-                                          @"funtionType" : @(ZRFunctionTypeClassConstruction)
-                                          },
-                                      @{
-                                          @"title" : @"KVO principle explore",
-                                          @"showIndicator" : @(NO),
-                                          @"funtionType" : @(ZRFunctionTypeKVOExplore)
-                                          },
-                                      ],
-                              },
-                          @{
-                              @"header" : @"Memory Manage",
-                              @"functionItems" : @[
-                                      @{
-                                          @"title" : @"object dealloc",
-                                          @"showIndicator" : @(NO),
-                                          @"funtionType" : @(ZRFunctionTypeObjectDealloc)
-                                          },
-                                      @{
-                                          @"title" : @"string dealloc",
-                                          @"showIndicator" : @(NO),
-                                          @"funtionType" : @(ZRFunctionTypeStringDealloc)
-                                          },
-                                      ],
-                              },
-                          @{
                               @"header" : @"File Manager",
                               @"functionItems" : @[
                                       @{
@@ -155,6 +120,41 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           },
                                       ],
                               },
+                          @{
+                              @"header" : @"Runtime",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"message forward (be careful crash 😂)",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeMessageForward)
+                                          },
+                                      @{
+                                          @"title" : @"construction of class",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeClassConstruction)
+                                          },
+                                      @{
+                                          @"title" : @"KVO principle explore",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeKVOExplore)
+                                          },
+                                      ],
+                              },
+                          @{
+                              @"header" : @"Memory Manage",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"object dealloc",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeObjectDealloc)
+                                          },
+                                      @{
+                                          @"title" : @"string dealloc",
+                                          @"showIndicator" : @(NO),
+                                          @"funtionType" : @(ZRFunctionTypeStringDealloc)
+                                          },
+                                      ],
+                              },
                           ];
 }
 
@@ -189,7 +189,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     NSArray *functionItems = function[@"functionItems"];
     NSDictionary *functionItem = functionItems[indexPath.row];
     cell.textLabel.text = functionItem[@"title"];
-    if ([function[@"showIndicator"] boolValue]) {
+    if ([functionItem[@"showIndicator"] boolValue]) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--首页-->
+        <!--Home-->
         <scene sceneID="aW2-Kg-19U">
             <objects>
                 <viewController id="hE0-dz-mFu" customClass="ViewController" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <constraint firstItem="bxC-yo-afd" firstAttribute="bottom" secondItem="h57-Qh-1uj" secondAttribute="top" id="ra5-Ee-jPS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="首页" id="9Xa-0s-nay"/>
+                    <navigationItem key="navigationItem" title="Home" id="9Xa-0s-nay"/>
                     <connections>
                         <outlet property="tableivew" destination="bxC-yo-afd" id="uex-hJ-hFz"/>
                     </connections>
