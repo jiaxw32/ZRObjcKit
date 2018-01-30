@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5i4-cb-AiD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5i4-cb-AiD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -128,6 +129,64 @@
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="-410.64467766116945"/>
         </scene>
+        <!--Image Round Corner View Controller-->
+        <scene sceneID="VEH-t7-HoK">
+            <objects>
+                <viewController storyboardIdentifier="ZRImageRoundCornerStoryboard" id="pgZ-dW-3iR" customClass="ZRImageRoundCornerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZEK-Bh-uxs"/>
+                        <viewControllerLayoutGuide type="bottom" id="LvC-lm-Mj3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kde-FL-1p6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-pT-kd0">
+                                <rect key="frame" x="127" y="66" width="120" height="384"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQ7-2z-Djt">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bQ7-2z-Djt" secondAttribute="height" multiplier="1:1" id="55f-SC-q2p"/>
+                                            <constraint firstAttribute="width" constant="120" id="tH6-eY-71L"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7aR-kE-6vR">
+                                        <rect key="frame" x="0.0" y="132" width="120" height="120"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="3tg-fT-5zo"/>
+                                            <constraint firstAttribute="width" secondItem="7aR-kE-6vR" secondAttribute="height" multiplier="1:1" id="tY9-Wy-ILF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-04-00Z">
+                                        <rect key="frame" x="0.0" y="264" width="120" height="120"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="RJS-5V-zx4"/>
+                                            <constraint firstAttribute="width" secondItem="IHo-04-00Z" secondAttribute="height" multiplier="1:1" id="Yp3-Nm-SWu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eHO-pT-kd0" firstAttribute="centerX" secondItem="kde-FL-1p6" secondAttribute="centerX" id="K2B-Rb-hld"/>
+                            <constraint firstItem="eHO-pT-kd0" firstAttribute="top" secondItem="ZEK-Bh-uxs" secondAttribute="bottom" constant="46" id="WoW-ro-Tc0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImageView" destination="IHo-04-00Z" id="r7h-on-bES"/>
+                        <outlet property="midImageView" destination="7aR-kE-6vR" id="Tpq-7P-GoH"/>
+                        <outlet property="topImageView" destination="bQ7-2z-Djt" id="Cwk-4B-byB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rt1-2N-dlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="-473"/>
+        </scene>
         <!--Home-->
         <scene sceneID="fA5-ab-yRf">
             <objects>
@@ -135,7 +194,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="7OZ-8c-FPO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ncK-CR-OYN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -34,6 +34,8 @@
 		DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.m */; };
 		DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B581FE0BAD300471AAF /* TODO.md */; };
 		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
+		DE57CCBE201F0B9D00AA1197 /* ZRImageRoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE57CCBD201F0B9C00AA1197 /* ZRImageRoundCornerViewController.m */; };
+		DE57CCC1201F135A00AA1197 /* UIImage+ZRRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = DE57CCC0201F135A00AA1197 /* UIImage+ZRRoundCorner.m */; };
 		DE75DE45201479EE00CD28C5 /* ZRStepStatisticView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75DE44201479EE00CD28C5 /* ZRStepStatisticView.m */; };
 		DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */; };
 		DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */; };
@@ -117,6 +119,10 @@
 		DE1A4B561FE019CA00471AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE1A4B581FE0BAD300471AAF /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		DE57CCBC201F0B9C00AA1197 /* ZRImageRoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRImageRoundCornerViewController.h; sourceTree = "<group>"; };
+		DE57CCBD201F0B9C00AA1197 /* ZRImageRoundCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRImageRoundCornerViewController.m; sourceTree = "<group>"; };
+		DE57CCBF201F135A00AA1197 /* UIImage+ZRRoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZRRoundCorner.h"; sourceTree = "<group>"; };
+		DE57CCC0201F135A00AA1197 /* UIImage+ZRRoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZRRoundCorner.m"; sourceTree = "<group>"; };
 		DE75DE43201479EE00CD28C5 /* ZRStepStatisticView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStepStatisticView.h; sourceTree = "<group>"; };
 		DE75DE44201479EE00CD28C5 /* ZRStepStatisticView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStepStatisticView.m; sourceTree = "<group>"; };
 		DE7894771FF0A40A0060AE7A /* NSObject+ZRDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZRDebug.h"; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				DED5C2841FE5225E0022BA5B /* ZRObjcKitConstant.h */,
+				DE57CCBF201F135A00AA1197 /* UIImage+ZRRoundCorner.h */,
+				DE57CCC0201F135A00AA1197 /* UIImage+ZRRoundCorner.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -382,6 +390,15 @@
 			path = ZRTrackingManager;
 			sourceTree = "<group>";
 		};
+		DE57CCBB201F0B9C00AA1197 /* ZRImageRoundCornerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE57CCBC201F0B9C00AA1197 /* ZRImageRoundCornerViewController.h */,
+				DE57CCBD201F0B9C00AA1197 /* ZRImageRoundCornerViewController.m */,
+			);
+			path = ZRImageRoundCornerDemo;
+			sourceTree = "<group>";
+		};
 		DE75DE42201479EE00CD28C5 /* ZRStepStatisticView */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +516,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DE57CCBB201F0B9C00AA1197 /* ZRImageRoundCornerDemo */,
 				DE0569B52015900F00F10E38 /* ZRCustomCalenderDemo */,
 				DE0569A02014838300F10E38 /* ZRStepStatisticViewDemo */,
 				DE7894801FF38C590060AE7A /* ZRKvoDemo */,
@@ -749,6 +767,7 @@
 				DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */,
 				DE1A4B4D1FE0164100471AAF /* UICollectionView+ZRTracking.m in Sources */,
 				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,
+				DE57CCBE201F0B9D00AA1197 /* ZRImageRoundCornerViewController.m in Sources */,
 				DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */,
 				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
@@ -777,6 +796,7 @@
 				DED5C2771FE517C90022BA5B /* ZRGridViewLayoutAndStyle.m in Sources */,
 				DE1A4B4A1FE0164100471AAF /* FMDatabaseQueue+ZRSharedDBQueue.m in Sources */,
 				DED5C24C1FE26EA30022BA5B /* ZRTextViewAutoSizeViewController.m in Sources */,
+				DE57CCC1201F135A00AA1197 /* UIImage+ZRRoundCorner.m in Sources */,
 				DE1A4B511FE0164100471AAF /* UIViewController+ZRTracking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,7 +864,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -887,7 +907,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

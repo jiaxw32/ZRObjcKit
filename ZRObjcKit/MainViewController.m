@@ -21,6 +21,7 @@
 #import "ZRWorker.h"
 #import "ZRStepStatisticViewController.h"
 #import "ZRCustomCalendarViewController.h"
+#import "ZRImageRoundCornerViewController.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -37,6 +38,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeTwoDimensionPickerView,   //二维PikcerView
     ZRFunctionTypeObjectDealloc,    //对象销毁
     ZRFunctionTypeStringDealloc,    //字符串销毁
+    ZRFunctionTypeRoundImage, //图像圆角
 };
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -109,6 +111,11 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"funtionType" : @(ZRFunctionTypeTextViewAutoSize)
                                           },
                                       @{
+                                          @"title" : @"round image demo",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeRoundImage)
+                                          },
+                                      @{
                                           @"title" : @"one dimension pickerview",
                                           @"showIndicator" : @(YES),
                                           @"funtionType" : @(ZRFunctionTypeOneDimensionPickerView)
@@ -118,6 +125,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"showIndicator" : @(YES),
                                           @"funtionType" : @(ZRFunctionTypeTwoDimensionPickerView)
                                           },
+
                                       ],
                               },
                           @{
@@ -266,6 +274,9 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
         case ZRFunctionTypeStringDealloc:
             [self stringDeallocTest];
             break;
+        case ZRFunctionTypeRoundImage:
+            [self gotoImageRoundCornerDemo];
+            break;
         default:
             break;
     }
@@ -383,6 +394,14 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
         //TODO: do something here
     };
     [pickerView show];
+}
+
+- (void)gotoImageRoundCornerDemo{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ZRImageRoundCornerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ZRImageRoundCornerStoryboard"];
+    if (vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark KVO Explore
