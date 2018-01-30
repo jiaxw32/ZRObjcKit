@@ -14,6 +14,25 @@
     return [self zr_roundImageWithRadius:radius andCorners:UIRectCornerAllCorners];
 }
 
+/*
+- (UIImage *)roundImageWithRadius:(CGFloat)radius{
+    CALayer *imageLayer = [CALayer layer];
+    imageLayer.frame = CGRectMake(0, 0, self.size.width, self.size.height);
+    imageLayer.contents = (id) self.CGImage;
+    
+    imageLayer.masksToBounds = YES;
+    imageLayer.cornerRadius = radius;
+    
+    UIGraphicsBeginImageContext(self.size);
+    [imageLayer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *roundedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return roundedImage;
+
+}
+ */
+
 - (UIImage *)zr_roundImageWithRadius:(CGFloat)radius andCorners:(UIRectCorner)corners{
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
