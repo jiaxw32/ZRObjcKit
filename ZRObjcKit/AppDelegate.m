@@ -19,9 +19,19 @@
 
 @implementation AppDelegate
 
+void exceptionHandler(NSException *exception){
+    printf("==================================crash info begin==================================\n");
+    printf("exception name: %s\n", [exception.name UTF8String]);
+    printf("exception reason: %s\n", [exception.reason UTF8String]);
+    printf("exception userinfo: %s\n", [[exception.userInfo description] UTF8String]);
+    printf("call Stack Symbols:\n%s\n", [[exception.callStackSymbols description] UTF8String]);
+    printf("==================================crash info end==================================\n");
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    NSUncaughtExceptionHandler *exceptionHandlerPointer = &exceptionHandler;
+    NSSetUncaughtExceptionHandler(&exceptionHandler);
     
 //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
