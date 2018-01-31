@@ -32,55 +32,80 @@
     // Configure the view for the selected state
 }
 
-- (void)configImage{
+
+
+- (void)roundImageWithType:(ZRRoundImageType)roundImageType{
+    switch (roundImageType) {
+        case ZRRoundImageTypeLayerRadius:
+            [self roundImageViewWithLayerRadius];
+            break;
+        case ZRRoundImageTypeMaskLayer:
+            [self roundImageWithMaskLayer];
+            break;
+        case ZRRoundImageTypeClipImage:
+            [self roundImage];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)roundImageViewWithLayerRadius{
     CGFloat radius = self.firstImageView.bounds.size.width / 2.0f;
     
-//    [self roundImageView:_firstImageView radius:radius];
-//    [self roundImageView:_secondImageView radius:radius];
-//    [self roundImageView:_thirdImageView radius:radius];
-//    [self roundImageView:_fourthImageView radius:radius];
+    void(^roundImageView)(UIImageView *) = ^(UIImageView *imageView){
+        NSString *imageName = [NSString stringWithFormat:@"avatar_%@", @(arc4random() % 3 + 1)];
+        imageView.image = [UIImage imageNamed:imageName];
+        imageView.layer.cornerRadius = radius;
+        imageView.layer.masksToBounds = YES;
+    };
     
-//    [self maskImageView:_firstImageView radius:radius];
-//    [self maskImageView:_secondImageView radius:radius];
-//    [self maskImageView:_thirdImageView radius:radius];
-//    [self maskImageView:_fourthImageView radius:radius];
-    
-    [self roundImageView:_firstImageView];
-    [self roundImageView:_secondImageView];
-    [self roundImageView:_thirdImageView];
-    [self roundImageView:_fourthImageView];
+    roundImageView(_firstImageView);
+    roundImageView(_secondImageView);
+    roundImageView(_thirdImageView);
+    roundImageView(_fourthImageView);
 }
 
-- (void)roundImageView:(UIImageView *)imageView radius:(CGFloat)radius{
+- (void)roundImageWithMaskLayer{
+    CGFloat radius = self.firstImageView.bounds.size.width / 2.0f;
     
-    NSString *imageName = [NSString stringWithFormat:@"avatar_%@",@(arc4random()%3 + 1)];
-    imageView.image = [UIImage imageNamed:imageName];
-    imageView.layer.cornerRadius = radius;
-    imageView.layer.masksToBounds = YES;
+    void(^maskImageView)(UIImageView *) = ^(UIImageView *imageView){
+        NSString *imageName = [NSString stringWithFormat:@"avatar_%@",@(arc4random()%3 + 1)];
+        imageView.image = [UIImage imageNamed:imageName];
+        
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:
+                                  imageView.layer.bounds
+                                                       byRoundingCorners:UIRectCornerAllCorners
+                                                             cornerRadii:CGSizeMake(radius, radius)];
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        maskLayer.frame = imageView.layer.bounds;
+        maskLayer.path = maskPath.CGPath;
+        
+        imageView.layer.mask = maskLayer;
+        imageView.layer.shouldRasterize = YES;
+    };
+    
+    maskImageView(_firstImageView);
+    maskImageView(_secondImageView);
+    maskImageView(_thirdImageView);
+    maskImageView(_fourthImageView);
 }
 
-- (void)roundImageView:(UIImageView *)imageView{
-    NSString *imageName = [NSString stringWithFormat:@"avatar_%@",@(arc4random()%3 + 1)];
-    UIImage *image = [UIImage imageNamed:imageName];
-    CGFloat radius = image.size.width / 2.0f;
-    [image zr_roundImageWithRadius:radius completionHandler:^(UIImage *roundedImage) {
-        imageView.image = roundedImage;
-    }];
-}
-
-- (void)maskImageView:(UIImageView *)imageView radius:(CGFloat)radius{
-    NSString *imageName = [NSString stringWithFormat:@"avatar_%@",@(arc4random()%3 + 1)];
-    imageView.image = [UIImage imageNamed:imageName];
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:
-                              imageView.layer.bounds
-                                                   byRoundingCorners:UIRectCornerAllCorners
-                                                         cornerRadii:CGSizeMake(radius, radius)];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = imageView.layer.bounds;
-    maskLayer.path = maskPath.CGPath;
-    imageView.layer.mask = maskLayer;
-    imageView.layer.shouldRasterize = YES;
-
+- (void)roundImage{
+    
+    void(^clipImage)(UIImageView *) = ^(UIImageView *imageView){
+        NSString *imageName = [NSString stringWithFormat:@"avatar_%@",@(arc4random()%3 + 1)];
+        UIImage *image = [UIImage imageNamed:imageName];
+        CGFloat radius = image.size.width / 2.0f;
+        [image zr_roundImageWithRadius:radius completionHandler:^(UIImage *roundedImage) {
+            imageView.image = roundedImage;
+        }];
+    };
+    
+    clipImage(_firstImageView);
+    clipImage(_secondImageView);
+    clipImage(_thirdImageView);
+    clipImage(_fourthImageView);
 }
 
 + (CGFloat)cellHeight{

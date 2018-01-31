@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, ZRRoundImageType) {
+    ZRRoundImageTypeLayerRadius,
+    ZRRoundImageTypeMaskLayer,
+    ZRRoundImageTypeClipImage,
+};
+
 @interface ZRRoundImageTableViewCell : UITableViewCell
 
-- (void)configImage;
-
+- (void)roundImageWithType:(ZRRoundImageType)roundImageType;
 
 + (CGFloat)cellHeight;
 

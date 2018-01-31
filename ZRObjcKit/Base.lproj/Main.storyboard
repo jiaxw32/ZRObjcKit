@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gXz-Va-PB6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="roundImageCell" rowHeight="80" id="wQi-Wb-7AH" customClass="ZRRoundImageTableViewCell">
@@ -163,20 +163,13 @@
                                                     <rect key="frame" x="87" y="9" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Td3-RG-8Xh" secondAttribute="height" multiplier="1:1" id="0gt-2o-fuE"/>
-                                                        <constraint firstAttribute="height" constant="60" id="b6K-Bf-tec"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Rv-Rf-YBQ">
                                                     <rect key="frame" x="159" y="9" width="60" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="RP7-Nk-kio"/>
-                                                    </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Phs-wW-nro">
                                                     <rect key="frame" x="231" y="9" width="60" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="JaO-K8-IbR"/>
-                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -186,8 +179,11 @@
                                                 <constraint firstItem="Phs-wW-nro" firstAttribute="width" secondItem="Phs-wW-nro" secondAttribute="height" multiplier="1:1" id="UvW-rr-bQ1"/>
                                                 <constraint firstItem="9Rv-Rf-YBQ" firstAttribute="leading" secondItem="Td3-RG-8Xh" secondAttribute="trailing" constant="12" id="Vjg-23-ejX"/>
                                                 <constraint firstItem="Td3-RG-8Xh" firstAttribute="centerY" secondItem="Hyz-mq-TJg" secondAttribute="centerY" id="WbE-nO-f9V"/>
+                                                <constraint firstItem="Td3-RG-8Xh" firstAttribute="height" secondItem="XeP-Fk-OH3" secondAttribute="height" id="Wzz-NF-VaP"/>
+                                                <constraint firstItem="9Rv-Rf-YBQ" firstAttribute="height" secondItem="XeP-Fk-OH3" secondAttribute="height" id="Xoq-hx-JdL"/>
                                                 <constraint firstItem="XeP-Fk-OH3" firstAttribute="centerY" secondItem="Hyz-mq-TJg" secondAttribute="centerY" id="ayG-qU-ywn"/>
                                                 <constraint firstItem="Phs-wW-nro" firstAttribute="centerY" secondItem="Hyz-mq-TJg" secondAttribute="centerY" id="cms-cf-X2U"/>
+                                                <constraint firstItem="Phs-wW-nro" firstAttribute="height" secondItem="XeP-Fk-OH3" secondAttribute="height" id="mWV-wl-Lgj"/>
                                                 <constraint firstItem="Td3-RG-8Xh" firstAttribute="leading" secondItem="XeP-Fk-OH3" secondAttribute="trailing" constant="12" id="sI9-ST-tvq"/>
                                                 <constraint firstItem="9Rv-Rf-YBQ" firstAttribute="centerY" secondItem="Hyz-mq-TJg" secondAttribute="centerY" id="v72-ev-WTc"/>
                                             </constraints>
@@ -214,6 +210,8 @@
                             <constraint firstItem="gXz-Va-PB6" firstAttribute="top" secondItem="ZEK-Bh-uxs" secondAttribute="bottom" id="oD7-Ns-Uq4"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gXz-Va-PB6" id="ga3-BX-6mW"/>
                     </connections>
