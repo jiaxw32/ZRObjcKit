@@ -62,6 +62,8 @@
 		DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */; };
 		DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */; };
 		DEF69DFF20207478002A5FBF /* ZRRoundImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69DFE20207478002A5FBF /* ZRRoundImageTableViewCell.m */; };
+		DEF69E022021920B002A5FBF /* UIImageView+ZRRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69E012021920B002A5FBF /* UIImageView+ZRRoundCorner.m */; };
+		DEF69E06202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69E05202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +178,10 @@
 		DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMultiOperationView.m; sourceTree = "<group>"; };
 		DEF69DFD20207478002A5FBF /* ZRRoundImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRRoundImageTableViewCell.h; sourceTree = "<group>"; };
 		DEF69DFE20207478002A5FBF /* ZRRoundImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRRoundImageTableViewCell.m; sourceTree = "<group>"; };
+		DEF69E002021920B002A5FBF /* UIImageView+ZRRoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZRRoundCorner.h"; sourceTree = "<group>"; };
+		DEF69E012021920B002A5FBF /* UIImageView+ZRRoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZRRoundCorner.m"; sourceTree = "<group>"; };
+		DEF69E04202195FB002A5FBF /* ZRRoundImageViewCornerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRRoundImageViewCornerViewController.h; sourceTree = "<group>"; };
+		DEF69E05202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRRoundImageViewCornerViewController.m; sourceTree = "<group>"; };
 		F54AF23E14FF2ED52102C06B /* Pods-ZRTrackingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRTrackingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRTrackingManager/Pods-ZRTrackingManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +277,8 @@
 				DED5C2841FE5225E0022BA5B /* ZRObjcKitConstant.h */,
 				DE57CCBF201F135A00AA1197 /* UIImage+ZRRoundCorner.h */,
 				DE57CCC0201F135A00AA1197 /* UIImage+ZRRoundCorner.m */,
+				DEF69E002021920B002A5FBF /* UIImageView+ZRRoundCorner.h */,
+				DEF69E012021920B002A5FBF /* UIImageView+ZRRoundCorner.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -521,6 +529,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEF69E03202195E1002A5FBF /* ZRRoundImageViewCornerDemo */,
 				DE57CCBB201F0B9C00AA1197 /* ZRImageRoundCornerDemo */,
 				DE0569B52015900F00F10E38 /* ZRCustomCalenderDemo */,
 				DE0569A02014838300F10E38 /* ZRStepStatisticViewDemo */,
@@ -628,6 +637,15 @@
 				DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */,
 			);
 			path = ZRMultiOperationView;
+			sourceTree = "<group>";
+		};
+		DEF69E03202195E1002A5FBF /* ZRRoundImageViewCornerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DEF69E04202195FB002A5FBF /* ZRRoundImageViewCornerViewController.h */,
+				DEF69E05202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m */,
+			);
+			path = ZRRoundImageViewCornerDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -775,9 +793,11 @@
 				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,
 				DE57CCBE201F0B9D00AA1197 /* ZRImageRoundCornerViewController.m in Sources */,
 				DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */,
+				DEF69E06202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m in Sources */,
 				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
 				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
+				DEF69E022021920B002A5FBF /* UIImageView+ZRRoundCorner.m in Sources */,
 				DE75DE45201479EE00CD28C5 /* ZRStepStatisticView.m in Sources */,
 				DED5C2741FE517C90022BA5B /* ZRGridView.m in Sources */,
 				DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */,

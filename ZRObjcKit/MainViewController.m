@@ -22,6 +22,7 @@
 #import "ZRStepStatisticViewController.h"
 #import "ZRCustomCalendarViewController.h"
 #import "ZRImageRoundCornerViewController.h"
+#import "ZRRoundImageViewCornerViewController.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -39,6 +40,7 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeObjectDealloc,    //对象销毁
     ZRFunctionTypeStringDealloc,    //字符串销毁
     ZRFunctionTypeRoundImage, //图像圆角
+    ZRFunctionTypeRoundImageViewAspectFit
 };
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -111,11 +113,6 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"funtionType" : @(ZRFunctionTypeTextViewAutoSize)
                                           },
                                       @{
-                                          @"title" : @"round image demo",
-                                          @"showIndicator" : @(YES),
-                                          @"funtionType" : @(ZRFunctionTypeRoundImage)
-                                          },
-                                      @{
                                           @"title" : @"one dimension pickerview",
                                           @"showIndicator" : @(YES),
                                           @"funtionType" : @(ZRFunctionTypeOneDimensionPickerView)
@@ -125,7 +122,11 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"showIndicator" : @(YES),
                                           @"funtionType" : @(ZRFunctionTypeTwoDimensionPickerView)
                                           },
-
+                                      @{
+                                          @"title" : @"round imageview for aspect fit",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeRoundImageViewAspectFit)
+                                          },
                                       ],
                               },
                           @{
@@ -160,6 +161,16 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"title" : @"string dealloc",
                                           @"showIndicator" : @(NO),
                                           @"funtionType" : @(ZRFunctionTypeStringDealloc)
+                                          },
+                                      ],
+                              },
+                          @{
+                              @"header" : @"Performance Analyze",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"FPS: round image demo",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeRoundImage)
                                           },
                                       ],
                               },
@@ -276,6 +287,9 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
             break;
         case ZRFunctionTypeRoundImage:
             [self gotoImageRoundCornerDemo];
+            break;
+        case ZRFunctionTypeRoundImageViewAspectFit:
+            [self gotoRoundImageViewAspectFitDemo];
             break;
         default:
             break;
@@ -399,6 +413,14 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
 - (void)gotoImageRoundCornerDemo{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ZRImageRoundCornerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ZRImageRoundCornerStoryboard"];
+    if (vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)gotoRoundImageViewAspectFitDemo{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ZRRoundImageViewCornerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ZRRoundImageViewCornerAspectFit"];
     if (vc) {
         [self.navigationController pushViewController:vc animated:YES];
     }

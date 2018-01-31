@@ -28,8 +28,6 @@
 //    }];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"select" style:UIBarButtonItemStyleDone target:self action:@selector(actionSelectRoundType)];
     self.roundImageType = ZRRoundImageTypeLayerRadius;
-    
-    NSLog(@"%@", @(CGFLOAT_MIN));
 }
 
 - (void)didReceiveMemoryWarning {
