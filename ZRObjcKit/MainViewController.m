@@ -23,6 +23,7 @@
 #import "ZRCustomCalendarViewController.h"
 #import "ZRImageRoundCornerViewController.h"
 #import "ZRRoundImageViewCornerViewController.h"
+#import "ZRWebViewContentHeightCalculateController.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -40,7 +41,8 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeObjectDealloc,    //对象销毁
     ZRFunctionTypeStringDealloc,    //字符串销毁
     ZRFunctionTypeRoundImage, //图像圆角
-    ZRFunctionTypeRoundImageViewAspectFit
+    ZRFunctionTypeRoundImageViewAspectFit,
+    ZRFunctionTypeWebViewContentHeightCalculate //WebView内容高度计算
 };
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -127,6 +129,12 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           @"showIndicator" : @(YES),
                                           @"funtionType" : @(ZRFunctionTypeRoundImageViewAspectFit)
                                           },
+                                      @{
+                                          @"title" : @"webview content height calculate",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeWebViewContentHeightCalculate)
+                                          },
+
                                       ],
                               },
                           @{
@@ -291,6 +299,9 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
         case ZRFunctionTypeRoundImageViewAspectFit:
             [self gotoRoundImageViewAspectFitDemo];
             break;
+        case ZRFunctionTypeWebViewContentHeightCalculate:
+            [self gotoWebviewContentHeightCalculateDemo];
+            break;
         default:
             break;
     }
@@ -424,6 +435,11 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     if (vc) {
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+- (void)gotoWebviewContentHeightCalculateDemo{
+    ZRWebViewContentHeightCalculateController *vc = [[ZRWebViewContentHeightCalculateController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark KVO Explore
