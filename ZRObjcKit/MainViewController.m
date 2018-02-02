@@ -24,6 +24,7 @@
 #import "ZRImageRoundCornerViewController.h"
 #import "ZRRoundImageViewCornerViewController.h"
 #import "ZRWebViewContentHeightCalculateController.h"
+#import "YXSuspendTabViewController.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -42,7 +43,8 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeStringDealloc,    //字符串销毁
     ZRFunctionTypeRoundImage, //图像圆角
     ZRFunctionTypeRoundImageViewAspectFit,
-    ZRFunctionTypeWebViewContentHeightCalculate //WebView内容高度计算
+    ZRFunctionTypeWebViewContentHeightCalculate, //WebView内容高度计算
+    ZRFunctionTypeTest
 };
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -182,6 +184,16 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
                                           },
                                       ],
                               },
+                          @{
+                              @"header" : @"Reserved Test Demo",
+                              @"functionItems" : @[
+                                      @{
+                                          @"title" : @"test",
+                                          @"showIndicator" : @(YES),
+                                          @"funtionType" : @(ZRFunctionTypeTest)
+                                          },
+                                      ],
+                              },
                           ];
 }
 
@@ -301,6 +313,9 @@ typedef NS_ENUM(NSUInteger, ZRFunctionType) {
             break;
         case ZRFunctionTypeWebViewContentHeightCalculate:
             [self gotoWebviewContentHeightCalculateDemo];
+            break;
+        case ZRFunctionTypeTest:
+            [self actionTest];
             break;
         default:
             break;
@@ -588,6 +603,13 @@ NSString *stringA;
         NSLog(@"%@ dealloc", stringC);
     }];
     
+}
+
+#pragma mark - Test
+
+- (void)actionTest{
+    YXSuspendTabViewController *vc = [[YXSuspendTabViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

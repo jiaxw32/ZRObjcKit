@@ -40,6 +40,16 @@
 		DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894781FF0A40A0060AE7A /* NSObject+ZRDebug.m */; };
 		DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */; };
 		DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7894851FF38C8C0060AE7A /* ZRWorker.m */; };
+		DEAB5C6C2024034000B0102B /* YXTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C5B2024034000B0102B /* YXTabView.m */; };
+		DEAB5C6D2024034000B0102B /* YXIgnoreHeaderTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C5C2024034000B0102B /* YXIgnoreHeaderTouchTableView.m */; };
+		DEAB5C6E2024034000B0102B /* YXTabTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C612024034000B0102B /* YXTabTitleView.m */; };
+		DEAB5C6F2024034000B0102B /* ItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C622024034000B0102B /* ItemDetailView.m */; };
+		DEAB5C702024034000B0102B /* YXTabItemBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C632024034000B0102B /* YXTabItemBaseView.m */; };
+		DEAB5C712024034000B0102B /* PicAndTextIntroduceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C662024034000B0102B /* PicAndTextIntroduceView.m */; };
+		DEAB5C722024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C672024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m */; };
+		DEAB5C732024034000B0102B /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C682024034000B0102B /* CommentView.m */; };
+		DEAB5C762024038400B0102B /* YXSuspendTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C752024038400B0102B /* YXSuspendTabViewController.m */; };
+		DEAB5C7B2024536900B0102B /* YXTabViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB5C7A2024536800B0102B /* YXTabViewStyle.m */; };
 		DEBE6F5B1FEE079600CD0854 /* ZRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */; };
 		DEC167D01FDD23AF00B1575F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167CF1FDD23AF00B1575F /* main.m */; };
 		DEC167D61FDD23AF00B1575F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC167D51FDD23AF00B1575F /* MainViewController.m */; };
@@ -139,6 +149,27 @@
 		DE78947E1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZRDeallocObserve.m"; sourceTree = "<group>"; };
 		DE7894841FF38C8C0060AE7A /* ZRWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRWorker.h; sourceTree = "<group>"; };
 		DE7894851FF38C8C0060AE7A /* ZRWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRWorker.m; sourceTree = "<group>"; };
+		DEAB5C5B2024034000B0102B /* YXTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTabView.m; sourceTree = "<group>"; };
+		DEAB5C5C2024034000B0102B /* YXIgnoreHeaderTouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXIgnoreHeaderTouchTableView.m; sourceTree = "<group>"; };
+		DEAB5C5D2024034000B0102B /* YXTabItemBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabItemBaseView.h; sourceTree = "<group>"; };
+		DEAB5C5E2024034000B0102B /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		DEAB5C5F2024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.h; sourceTree = "<group>"; };
+		DEAB5C602024034000B0102B /* PicAndTextIntroduceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicAndTextIntroduceView.h; sourceTree = "<group>"; };
+		DEAB5C612024034000B0102B /* YXTabTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTabTitleView.m; sourceTree = "<group>"; };
+		DEAB5C622024034000B0102B /* ItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailView.m; sourceTree = "<group>"; };
+		DEAB5C632024034000B0102B /* YXTabItemBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTabItemBaseView.m; sourceTree = "<group>"; };
+		DEAB5C642024034000B0102B /* YXIgnoreHeaderTouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXIgnoreHeaderTouchTableView.h; sourceTree = "<group>"; };
+		DEAB5C652024034000B0102B /* YXTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabView.h; sourceTree = "<group>"; };
+		DEAB5C662024034000B0102B /* PicAndTextIntroduceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicAndTextIntroduceView.m; sourceTree = "<group>"; };
+		DEAB5C672024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m; sourceTree = "<group>"; };
+		DEAB5C682024034000B0102B /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		DEAB5C692024034000B0102B /* ItemDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailView.h; sourceTree = "<group>"; };
+		DEAB5C6A2024034000B0102B /* YXHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXHeader.h; sourceTree = "<group>"; };
+		DEAB5C6B2024034000B0102B /* YXTabTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTabTitleView.h; sourceTree = "<group>"; };
+		DEAB5C742024038300B0102B /* YXSuspendTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSuspendTabViewController.h; sourceTree = "<group>"; };
+		DEAB5C752024038400B0102B /* YXSuspendTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSuspendTabViewController.m; sourceTree = "<group>"; };
+		DEAB5C792024536800B0102B /* YXTabViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXTabViewStyle.h; sourceTree = "<group>"; };
+		DEAB5C7A2024536800B0102B /* YXTabViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXTabViewStyle.m; sourceTree = "<group>"; };
 		DEBE6F591FEE079600CD0854 /* ZRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRPerson.h; sourceTree = "<group>"; };
 		DEBE6F5A1FEE079600CD0854 /* ZRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRPerson.m; sourceTree = "<group>"; };
 		DEC167CB1FDD23AF00B1575F /* ZRObjcKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRObjcKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -462,6 +493,42 @@
 			path = ZRKvoDemo;
 			sourceTree = "<group>";
 		};
+		DEAB5C5A2024034000B0102B /* YXSuspendTabTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEAB5C782024509000B0102B /* Demo */,
+				DEAB5C6A2024034000B0102B /* YXHeader.h */,
+				DEAB5C5F2024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.h */,
+				DEAB5C672024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m */,
+				DEAB5C642024034000B0102B /* YXIgnoreHeaderTouchTableView.h */,
+				DEAB5C5C2024034000B0102B /* YXIgnoreHeaderTouchTableView.m */,
+				DEAB5C5D2024034000B0102B /* YXTabItemBaseView.h */,
+				DEAB5C632024034000B0102B /* YXTabItemBaseView.m */,
+				DEAB5C6B2024034000B0102B /* YXTabTitleView.h */,
+				DEAB5C612024034000B0102B /* YXTabTitleView.m */,
+				DEAB5C652024034000B0102B /* YXTabView.h */,
+				DEAB5C5B2024034000B0102B /* YXTabView.m */,
+				DEAB5C792024536800B0102B /* YXTabViewStyle.h */,
+				DEAB5C7A2024536800B0102B /* YXTabViewStyle.m */,
+			);
+			path = YXSuspendTabTableView;
+			sourceTree = "<group>";
+		};
+		DEAB5C782024509000B0102B /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DEAB5C5E2024034000B0102B /* CommentView.h */,
+				DEAB5C682024034000B0102B /* CommentView.m */,
+				DEAB5C692024034000B0102B /* ItemDetailView.h */,
+				DEAB5C622024034000B0102B /* ItemDetailView.m */,
+				DEAB5C602024034000B0102B /* PicAndTextIntroduceView.h */,
+				DEAB5C662024034000B0102B /* PicAndTextIntroduceView.m */,
+				DEAB5C742024038300B0102B /* YXSuspendTabViewController.h */,
+				DEAB5C752024038400B0102B /* YXSuspendTabViewController.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		DEBE6F571FEE072100CD0854 /* ZRRuntimeDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +618,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEAB5C5A2024034000B0102B /* YXSuspendTabTableView */,
 				DEF69E07202309DB002A5FBF /* ZRWebViewContentHeightCalculateDemo */,
 				DEF69E03202195E1002A5FBF /* ZRRoundImageViewCornerDemo */,
 				DE57CCBB201F0B9C00AA1197 /* ZRImageRoundCornerDemo */,
@@ -825,9 +893,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAB5C6E2024034000B0102B /* YXTabTitleView.m in Sources */,
 				DEF69DFF20207478002A5FBF /* ZRRoundImageTableViewCell.m in Sources */,
 				DED5C2751FE517C90022BA5B /* ZRGridViewCell.m in Sources */,
 				DED5C27E1FE51CFF0022BA5B /* MDTabBar.m in Sources */,
+				DEAB5C6D2024034000B0102B /* YXIgnoreHeaderTouchTableView.m in Sources */,
 				DEF69E1520230D36002A5FBF /* ZRWebViewContentHeightCalculateController.m in Sources */,
 				DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */,
 				DEC167D61FDD23AF00B1575F /* MainViewController.m in Sources */,
@@ -838,6 +908,7 @@
 				DE0569A3201483B700F10E38 /* ZRStepStatisticViewController.m in Sources */,
 				DE0569A9201589EF00F10E38 /* ZRCustomCalendarDayCell.m in Sources */,
 				DED5C24F1FE2B7500022BA5B /* ZRTextViewAutoSizeExViewController.m in Sources */,
+				DEAB5C722024034000B0102B /* YXIgnoreHeaderTouchAndRecognizeSimultaneousTableView.m in Sources */,
 				DEBE6F5B1FEE079600CD0854 /* ZRPerson.m in Sources */,
 				DED5C2761FE517C90022BA5B /* ZRGridViewHeader.m in Sources */,
 				DE1A4B4F1FE0164100471AAF /* UINavigationController+ZRTracking.m in Sources */,
@@ -846,30 +917,37 @@
 				DE1A4B291FE0158A00471AAF /* ZRFileInfoModel.m in Sources */,
 				DE57CCBE201F0B9D00AA1197 /* ZRImageRoundCornerViewController.m in Sources */,
 				DE1A4B2A1FE0158A00471AAF /* ZRFileTableViewCell.m in Sources */,
+				DEAB5C762024038400B0102B /* YXSuspendTabViewController.m in Sources */,
 				DEF69E06202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m in Sources */,
 				DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */,
 				DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */,
 				DE1A4B4B1FE0164100471AAF /* ZRTrackingHelper.m in Sources */,
 				DEF69E022021920B002A5FBF /* UIImageView+ZRRoundCorner.m in Sources */,
 				DE75DE45201479EE00CD28C5 /* ZRStepStatisticView.m in Sources */,
+				DEAB5C6C2024034000B0102B /* YXTabView.m in Sources */,
+				DEAB5C712024034000B0102B /* PicAndTextIntroduceView.m in Sources */,
 				DED5C2741FE517C90022BA5B /* ZRGridView.m in Sources */,
 				DE7894861FF38C8C0060AE7A /* ZRWorker.m in Sources */,
 				DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */,
 				DE1A4B2D1FE0158A00471AAF /* ZRFileHelper.m in Sources */,
 				DE0569B220158BA500F10E38 /* NSCalendarHelper.m in Sources */,
 				DE0569B320158BA500F10E38 /* NSDate+MDExtension.m in Sources */,
+				DEAB5C7B2024536900B0102B /* YXTabViewStyle.m in Sources */,
 				DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */,
 				DE7894791FF0A40A0060AE7A /* NSObject+ZRDebug.m in Sources */,
 				DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */,
 				DED5C26A1FE5113F0022BA5B /* ZRPickerView.m in Sources */,
 				DEC168281FDD292D00B1575F /* OpenUDID.m in Sources */,
+				DEAB5C732024034000B0102B /* CommentView.m in Sources */,
 				DED5C2651FE506160022BA5B /* ZRGridViewController.m in Sources */,
 				DE0569B420158BA500F10E38 /* NSDateHelper.m in Sources */,
+				DEAB5C6F2024034000B0102B /* ItemDetailView.m in Sources */,
 				DE1A4B501FE0164100471AAF /* UITableView+ZRDelegateTracking.m in Sources */,
 				DE1A4B2B1FE0158A00471AAF /* ZRFileListViewController.m in Sources */,
 				DEF69E1220230C60002A5FBF /* ZRWKWebViewContentHeightCalculateController.m in Sources */,
 				DEC167D01FDD23AF00B1575F /* main.m in Sources */,
 				DE0569B82015902400F10E38 /* ZRCustomCalendarViewController.m in Sources */,
+				DEAB5C702024034000B0102B /* YXTabItemBaseView.m in Sources */,
 				DED5C27F1FE51CFF0022BA5B /* MDTabBarViewController.m in Sources */,
 				DE0569AA201589EF00F10E38 /* ZRCustomCalendarView.m in Sources */,
 				DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */,
