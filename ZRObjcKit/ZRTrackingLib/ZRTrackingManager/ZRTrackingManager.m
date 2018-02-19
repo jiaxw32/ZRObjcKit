@@ -366,6 +366,21 @@ static const NSInteger kZR_Device_Type_iOS  = 1;
                          className:(NSString *)className
                             params:(NSDictionary *)params
                                tag:(NSString *)tag{
+    NSString *state;
+    switch ([UIApplication sharedApplication].applicationState) {
+        case UIApplicationStateActive:
+            state = @"Active";
+            break;
+        case UIApplicationStateInactive:
+            state = @"Inactive";
+            break;
+        case UIApplicationStateBackground:
+            state = @"Backgroud";
+            break;
+        default:
+            break;
+    }
+
     dispatch_async(_trackingQueue, ^{
         
         [[FMDatabaseQueue shareInstance] inDatabase:^(FMDatabase *db) {
@@ -373,20 +388,6 @@ static const NSInteger kZR_Device_Type_iOS  = 1;
             NSString *fid = [ZRTrackingHelper createUUID];
             NSString *jsonParams = [ZRTrackingHelper convertToJsonStringFromObject:params];
             
-            NSString *state;
-            switch ([UIApplication sharedApplication].applicationState) {
-                case UIApplicationStateActive:
-                    state = @"Active";
-                    break;
-                case UIApplicationStateInactive:
-                    state = @"Inactive";
-                    break;
-                case UIApplicationStateBackground:
-                    state = @"Backgroud";
-                    break;
-                default:
-                    break;
-            }
             BOOL result =[db insertInto:kZR_Track_Func_Invoke_Table
                                 columns:@[
                                           @"fid",
