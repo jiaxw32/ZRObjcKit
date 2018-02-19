@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import "ZRWebViewContentHeightCalculateConstant.h"
 
-@interface ZRWKWebViewContentHeightCalculateController ()<WKNavigationDelegate>
+@interface ZRWKWebViewContentHeightCalculateController ()<WKNavigationDelegate,WKUIDelegate,WKUIDelegate>
 
 @property (nonatomic,strong) WKWebView *webView;
 
@@ -47,7 +47,8 @@
     }];
     
     //默认加载本地pdf文件
-    [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:kZR_WebView_Resource_PDF_URL]];
+//    [weakSelf.webView loadRequest:[NSURLRequest requestWithURL:kZR_WebView_Resource_PDF_URL]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kZR_WebView_Resource_Web_URL]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +71,7 @@
         [v addObserver:self forKeyPath:@"loading" options:NSKeyValueObservingOptionNew context:nil];
         [v addObserver:self forKeyPath:@"scrollView.contentSize" options:NSKeyValueObservingOptionNew context:nil];
         v.navigationDelegate = self;
+        v.UIDelegate = self;
         [v sizeToFit];
         [contentView addSubview:v];
         v;
@@ -77,6 +79,11 @@
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(contentView);
     }];
+    
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    configuration.allowsInlineMediaPlayback = YES;
+//    [configuration.userContentController addScriptMessageHandler:self name:@"method"];
+//    configuration.preferences.javaScriptCanOpenWindowsAutomatically = YES;
 }
 
 
@@ -87,12 +94,45 @@
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-//    NSLog(@"%s",__func__);
+    NSLog(@"%s",__func__);
+    NSLog(@"content size: %@", NSStringFromCGSize(webView.scrollView.contentSize));
 }
 
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
 //    NSLog(@"%s",__func__);
 }
+
+- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
+    [webView reload];
+}
+
+#pragma mark - WKUIDelegate
+
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:message message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }];
+    [controller addAction:action];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:message message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(YES);
+    }];
+    [controller addAction:action];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(NO);
+    }];
+    [controller addAction:cancle];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+
+#pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if (object == self.webView) {
