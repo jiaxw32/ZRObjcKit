@@ -31,7 +31,7 @@
 		DE1A4B521FE0164100471AAF /* UIWindow+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B441FE0164100471AAF /* UIWindow+ZRTracking.m */; };
 		DE1A4B531FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B461FE0164100471AAF /* UNUserNotificationCenter+ZRTracking.m */; };
 		DE1A4B541FE0164100471AAF /* ZRTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */; };
-		DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.m */; };
+		DE1A4B571FE019CA00471AAF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B561FE019CA00471AAF /* AppDelegate.mm */; };
 		DE1A4B591FE0BAD300471AAF /* TODO.md in Sources */ = {isa = PBXBuildFile; fileRef = DE1A4B581FE0BAD300471AAF /* TODO.md */; };
 		DE1A4B5B1FE0C4EA00471AAF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */; };
 		DE57CCBE201F0B9D00AA1197 /* ZRImageRoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE57CCBD201F0B9C00AA1197 /* ZRImageRoundCornerViewController.m */; };
@@ -134,7 +134,7 @@
 		DE1A4B481FE0164100471AAF /* ZRTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTrackingManager.h; sourceTree = "<group>"; };
 		DE1A4B491FE0164100471AAF /* ZRTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTrackingManager.m; sourceTree = "<group>"; };
 		DE1A4B551FE019CA00471AAF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DE1A4B561FE019CA00471AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE1A4B561FE019CA00471AAF /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		DE1A4B581FE0BAD300471AAF /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		DE1A4B5A1FE0C4EA00471AAF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		DE57CCBC201F0B9C00AA1197 /* ZRImageRoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRImageRoundCornerViewController.h; sourceTree = "<group>"; };
@@ -568,7 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1A4B551FE019CA00471AAF /* AppDelegate.h */,
-				DE1A4B561FE019CA00471AAF /* AppDelegate.m */,
+				DE1A4B561FE019CA00471AAF /* AppDelegate.mm */,
 				DE0569D02017206700F10E38 /* Common */,
 				DEC168571FDEA91C00B1575F /* Images.xcassets */,
 				DE0569CE2017203F00F10E38 /* MainPage */,
@@ -862,13 +862,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZRObjcKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5CA368295DE79AB3509E139F /* [CP] Copy Pods Resources */ = {
@@ -899,7 +902,7 @@
 				DED5C27E1FE51CFF0022BA5B /* MDTabBar.m in Sources */,
 				DEAB5C6D2024034000B0102B /* YXIgnoreHeaderTouchTableView.m in Sources */,
 				DEF69E1520230D36002A5FBF /* ZRWebViewContentHeightCalculateController.m in Sources */,
-				DE1A4B571FE019CA00471AAF /* AppDelegate.m in Sources */,
+				DE1A4B571FE019CA00471AAF /* AppDelegate.mm in Sources */,
 				DEC167D61FDD23AF00B1575F /* MainViewController.m in Sources */,
 				DE1A4B4E1FE0164100471AAF /* UIControl+ZRTracking.m in Sources */,
 				DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */,
