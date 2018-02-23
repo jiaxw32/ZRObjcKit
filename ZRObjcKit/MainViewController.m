@@ -27,6 +27,7 @@
 #import "YXSuspendTabViewController.h"
 #import "ZRWKWebViewContentHeightCalculateController.h"
 #import "ZRSort.h"
+#import <ReactiveCocoa.h>
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -615,13 +616,26 @@ NSString *stringA;
 //    [self.navigationController pushViewController:vc animated:YES];
     
     NSURL *url = [NSURL URLWithString:@"https://github.com/jiaxw32?uid=jiaxw32&token=666"];
-    
     NSLog(@"url scheme: %@", url.scheme);
     NSLog(@"url host: %@", url.host);
     NSLog(@"url path: %@", url.path);
     NSLog(@"url query: %@", url.query);
     NSLog(@"url absolute string: %@", url.absoluteString);
     
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@1];
+        [subscriber sendNext:@2];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"invoke disposable block");
+        }];
+    }];
+    
+    [signal subscribeNext:^(id x) {
+        NSLog(@"next: %@", x);
+    } completed:^{
+        NSLog(@"complete");
+    }];
 }
 
 
