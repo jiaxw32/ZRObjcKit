@@ -26,6 +26,7 @@
 #import "ZRWebViewContentHeightCalculateController.h"
 #import "YXSuspendTabViewController.h"
 #import "ZRWKWebViewContentHeightCalculateController.h"
+#import "ZRSort.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -613,16 +614,6 @@ NSString *stringA;
 //    ZRWKWebViewContentHeightCalculateController *vc = [[ZRWKWebViewContentHeightCalculateController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    NSInteger i = 1 << 9;
-    
-    NSInteger k = 1 << 8;
-    
-    NSInteger j = 0 & i;
-    
-    NSLog(@"i=%@,j=%@,k=%@", @(i), @(j),@(i|k));
-    
-    NSLog(@"%@,%@", @(1 << 0), @(1 << 1));
-    
     NSURL *url = [NSURL URLWithString:@"https://github.com/jiaxw32?uid=jiaxw32&token=666"];
     
     NSLog(@"url scheme: %@", url.scheme);
@@ -631,101 +622,8 @@ NSString *stringA;
     NSLog(@"url query: %@", url.query);
     NSLog(@"url absolute string: %@", url.absoluteString);
     
-    NSLog(@"current queue label: %s", dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL));
-    
-    NSLog(@"");
-    
-    int arr[10];
-    for (int i = 0; i < 10; i++) {
-        arr[i] = arc4random() % 100;
-    }
-    
-    printf("original data:\t");
-    for (int i = 0; i < 10; i ++) {
-        printf("%i\t", arr[i]);
-    }
-    printf("\n");
-    
-    bubbleSort(arr, 10);
-    printf("bubble sorted data:\t");
-    for (int i = 0; i < 10; i ++) {
-        printf("%i\t", arr[i]);
-    }
-    printf("\n");
-    
-    quickSort(arr, 0, 10 - 1);
-    printf("quick sorted data:\t");
-    for (int i = 0; i < 10; i ++) {
-        printf("%i\t", arr[i]);
-    }
-    printf("\n");
-
-
-    
 }
 
-
-static void bubbleSort(int arr[], int length){
-    if (length < 2) {
-        return;
-    }
-    int temp;
-    for (int i = 0; i < length - 1; i++) {
-        for (int j = 0; j < length - 1 - i; j++) {
-            if (arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-}
-
-
-/**
- 白快速排序分区
-
- @param arr 输入数据
- @param low 最小索引
- @param high 最大索引
- @return 返回分区索引值
- */
-static int partition(int arr[], int low, int high){
-    int pivot = arr[low];
-    int temp;
-    while (true) {
-        while (arr[high] >= pivot && high > low) {
-            high--;
-        }
-        while (arr[low] < pivot && high > low) {
-            low++;
-        }
-        
-        if (low < high) {
-            temp = arr[low];
-            arr[low] = arr[high];
-            arr[high] = temp;
-        } else {
-            return high;
-        }
-    }
-}
-
-
-/**
- 快速排序
-
- @param arr 输入数据
- @param low 最小索引
- @param high 最大索引
- */
-static void quickSort(int arr[], int low, int high){
-    if (low < high) {
-        int index = partition(arr, low, high);
-        quickSort(arr, low ,index);
-        quickSort(arr, index + 1, high);
-    }
-}
 
 
 @end

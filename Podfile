@@ -11,5 +11,6 @@ target 'ZRObjcKit' do
   pod 'Ono', '~> 1.2.2'
   pod 'Masonry', '~> 1.0.2'
   pod 'MMPopupView', '~> 1.7.2'
+  pod 'ReactiveCocoa', '~> 2.5'
 
 end

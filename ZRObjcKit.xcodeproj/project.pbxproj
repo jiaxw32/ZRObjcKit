@@ -71,6 +71,7 @@
 		DED5C2831FE521B40022BA5B /* ZRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C2821FE521B40022BA5B /* ZRTabBarViewController.m */; };
 		DED7CF222009F656006B8B34 /* ZRKeyValueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */; };
 		DED7CF262009FD0F006B8B34 /* ZRMultiOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */; };
+		DEE25BE220400AE7004F4EF3 /* ZRSort.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE25BE120400AE7004F4EF3 /* ZRSort.m */; };
 		DEF69DFF20207478002A5FBF /* ZRRoundImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69DFE20207478002A5FBF /* ZRRoundImageTableViewCell.m */; };
 		DEF69E022021920B002A5FBF /* UIImageView+ZRRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69E012021920B002A5FBF /* UIImageView+ZRRoundCorner.m */; };
 		DEF69E06202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF69E05202195FB002A5FBF /* ZRRoundImageViewCornerViewController.m */; };
@@ -212,6 +213,8 @@
 		DED7CF212009F656006B8B34 /* ZRKeyValueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKeyValueTableViewCell.m; sourceTree = "<group>"; };
 		DED7CF242009FD0F006B8B34 /* ZRMultiOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMultiOperationView.h; sourceTree = "<group>"; };
 		DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMultiOperationView.m; sourceTree = "<group>"; };
+		DEE25BE020400AE7004F4EF3 /* ZRSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRSort.h; sourceTree = "<group>"; };
+		DEE25BE120400AE7004F4EF3 /* ZRSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRSort.m; sourceTree = "<group>"; };
 		DEF69DFD20207478002A5FBF /* ZRRoundImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRRoundImageTableViewCell.h; sourceTree = "<group>"; };
 		DEF69DFE20207478002A5FBF /* ZRRoundImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRRoundImageTableViewCell.m; sourceTree = "<group>"; };
 		DEF69E002021920B002A5FBF /* UIImageView+ZRRoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZRRoundCorner.h"; sourceTree = "<group>"; };
@@ -618,6 +621,7 @@
 		DED5C2481FE267A90022BA5B /* ZRDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEE25BDF20400AC6004F4EF3 /* ZRAlgorithm */,
 				DEAB5C5A2024034000B0102B /* YXSuspendTabTableView */,
 				DEF69E07202309DB002A5FBF /* ZRWebViewContentHeightCalculateDemo */,
 				DEF69E03202195E1002A5FBF /* ZRRoundImageViewCornerDemo */,
@@ -728,6 +732,15 @@
 				DED7CF252009FD0F006B8B34 /* ZRMultiOperationView.m */,
 			);
 			path = ZRMultiOperationView;
+			sourceTree = "<group>";
+		};
+		DEE25BDF20400AC6004F4EF3 /* ZRAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				DEE25BE020400AE7004F4EF3 /* ZRSort.h */,
+				DEE25BE120400AE7004F4EF3 /* ZRSort.m */,
+			);
+			path = ZRAlgorithm;
 			sourceTree = "<group>";
 		};
 		DEF69E03202195E1002A5FBF /* ZRRoundImageViewCornerDemo */ = {
@@ -951,6 +964,7 @@
 				DEC167D01FDD23AF00B1575F /* main.m in Sources */,
 				DE0569B82015902400F10E38 /* ZRCustomCalendarViewController.m in Sources */,
 				DEAB5C702024034000B0102B /* YXTabItemBaseView.m in Sources */,
+				DEE25BE220400AE7004F4EF3 /* ZRSort.m in Sources */,
 				DED5C27F1FE51CFF0022BA5B /* MDTabBarViewController.m in Sources */,
 				DE0569AA201589EF00F10E38 /* ZRCustomCalendarView.m in Sources */,
 				DE78947F1FF0A5420060AE7A /* NSObject+ZRDeallocObserve.m in Sources */,
