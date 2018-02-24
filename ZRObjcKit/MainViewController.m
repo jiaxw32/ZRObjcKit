@@ -28,6 +28,7 @@
 #import "ZRWKWebViewContentHeightCalculateController.h"
 #import "ZRSort.h"
 #import <ReactiveCocoa.h>
+#import <ReactiveCocoa/RACReturnSignal.h>
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -632,6 +633,13 @@ NSString *stringA;
     }];
     
     [signal subscribeNext:^(id x) {
+        NSLog(@"next: %@", x);
+    } completed:^{
+        NSLog(@"complete");
+    }];
+    
+    RACSignal *returnSignal = [RACReturnSignal return:@"bye"];
+    [returnSignal subscribeNext:^(id x) {
         NSLog(@"next: %@", x);
     } completed:^{
         NSLog(@"complete");
