@@ -14,5 +14,6 @@ target 'ZRObjcKit' do
   pod 'ReactiveCocoa', '~> 2.5'
   pod 'AFNetworking', '~> 3.1.0'
   pod 'SDWebImage', '~> 4.0.0'
+  pod 'WebViewJavascriptBridge', '~> 6.0.2'
 
 end
