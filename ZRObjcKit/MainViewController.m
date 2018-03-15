@@ -29,6 +29,7 @@
 #import "ZRSort.h"
 #import <ReactiveCocoa.h>
 #import <ReactiveCocoa/RACReturnSignal.h>
+#import "ZRSingleton.h"
 
 typedef NS_ENUM(NSUInteger, ZRFunctionType) {
     ZRFunctionTypeUnknown = 0,
@@ -615,6 +616,19 @@ NSString *stringA;
 //    [self.navigationController pushViewController:vc animated:YES];
 //    ZRWKWebViewContentHeightCalculateController *vc = [[ZRWKWebViewContentHeightCalculateController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
+    
+    ZRSingleton *singleton1 = [[ZRSingleton alloc] init];
+    
+    
+    ZRSingleton *singleton2 = [[ZRSingleton alloc] init];
+    
+    ZRSingleton *singleton3 = [ZRSingleton sharedInstance];
+    
+    ZRSingleton *singleton4 = [singleton1 copy];
+    
+    NSLog(@"\nsingleton one:%@\n singleton two: %@\n singleton three: %@\n singleton four: %@\n", [singleton1 description], [singleton2 description], [singleton3 description], [singleton4 description]);
+    
+    return;
     
     NSURL *url = [NSURL URLWithString:@"https://github.com/jiaxw32?uid=jiaxw32&token=666"];
     NSLog(@"url scheme: %@", url.scheme);
